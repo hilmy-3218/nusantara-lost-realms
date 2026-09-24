@@ -183,7 +183,7 @@ export default function Guardians({ lang = 'IND' }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full min-h-screen lg:min-h-0 lg:aspect-video bg-stone-950 text-amber-50 overflow-hidden select-none flex flex-col justify-between"
+      className="relative w-full min-h-[100svh] lg:min-h-0 lg:aspect-video bg-stone-950 text-amber-50 overflow-hidden select-none flex flex-col justify-between"
     >
       {/* Background Gambar Karakter */}
       <AnimatePresence mode="wait">
@@ -198,12 +198,12 @@ export default function Guardians({ lang = 'IND' }) {
           <img
             src={currentDisplayedImage}
             alt={selectedGuardian.name}
-            className="w-full h-full object-cover object-top lg:object-center filter brightness-90 contrast-105"
+            className="w-full h-full object-cover object-[center_20%] sm:object-[center_15%] lg:object-center filter brightness-90 contrast-105"
           />
           
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-transparent to-stone-950/90 hidden lg:block" />
           <div className="absolute top-0 left-0 right-0 h-2/5 sm:h-1/3 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-2/5 sm:h-1/3 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-3/5 sm:h-1/2 lg:h-1/3 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-black/60 pointer-events-none" />
         </motion.div>
       </AnimatePresence>
@@ -238,7 +238,7 @@ export default function Guardians({ lang = 'IND' }) {
         </motion.header>
 
         {/* Layout Utama Tengah */}
-        <div className="flex-1 grid grid-cols-12 gap-4 lg:gap-6 items-center my-auto py-2 sm:py-4">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-6 items-center my-auto py-2 sm:py-4">
           
           {/* Selector Karakter */}
           <motion.div 
@@ -246,7 +246,7 @@ export default function Guardians({ lang = 'IND' }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="col-span-12 lg:col-span-3 order-2 lg:order-1 z-20 self-end lg:self-center"
+            className="col-span-1 lg:col-span-3 order-2 lg:order-1 z-20 self-end lg:self-center w-full"
           >
             <div className="lg:hidden text-center mb-2">
               <span className="text-[10px] font-mono tracking-[0.2em] text-emerald-400 uppercase">
@@ -257,14 +257,14 @@ export default function Guardians({ lang = 'IND' }) {
               </h3>
             </div>
 
-            <div className="flex lg:flex-col gap-2.5 sm:gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-none justify-start sm:justify-center lg:justify-start px-2 sm:px-0">
+            <div className="flex lg:flex-col gap-2 sm:gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-none justify-center lg:justify-start px-3 sm:px-0 snap-x snap-mandatory">
               {content.list.map((guardian, idx) => {
                 const isActive = selectedIndex === idx;
                 return (
                   <button
                     key={guardian.id}
                     onClick={() => setSelectedIndex(idx)}
-                    className={`flex-shrink-0 flex items-center gap-3 p-1.5 sm:p-2 rounded-xl transition-all duration-300 border text-left relative group ${
+                    className={`flex-shrink-0 flex items-center gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-xl transition-all duration-300 border text-left relative group snap-center ${
                       isActive
                         ? "border-amber-400 bg-stone-900/90 shadow-[0_0_15px_rgba(217,119,6,0.3)] backdrop-blur-md scale-105 lg:scale-100"
                         : "border-emerald-950/80 bg-stone-950/70 hover:bg-stone-900/50 hover:border-amber-600/40 backdrop-blur-sm opacity-80"
@@ -277,7 +277,7 @@ export default function Guardians({ lang = 'IND' }) {
                       />
                     )}
 
-                    <div className={`w-10 h-10 sm:w-12 sm:h-12 relative overflow-hidden rounded-lg border-2 flex-shrink-0 transition-all ${
+                    <div className={`w-12 h-12 sm:w-12 sm:h-12 relative overflow-hidden rounded-lg border-2 flex-shrink-0 transition-all ${
                       isActive ? "border-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.5)]" : "border-emerald-900/50"
                     }`}>
                       <img
@@ -326,7 +326,7 @@ export default function Guardians({ lang = 'IND' }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="relative lg:absolute lg:bottom-10 lg:left-8 my-4 lg:my-0 mx-auto lg:mx-0 z-30 flex items-center gap-3 p-1.5 rounded-full bg-[#050806]/90 backdrop-blur-xl border border-[#cba342]/30 shadow-[0_0_30px_rgba(0,0,0,0.7),inset_0_0_15px_rgba(203,163,66,0.05)]"
+        className="relative lg:absolute lg:bottom-10 lg:left-8 my-2 lg:my-0 mx-auto lg:mx-0 z-30 flex items-center gap-2 sm:gap-3 p-1 sm:p-1.5 rounded-full bg-[#050806]/90 backdrop-blur-xl border border-[#cba342]/30 shadow-[0_0_30px_rgba(0,0,0,0.7),inset_0_0_15px_rgba(203,163,66,0.05)]"
       >
         {/* Label */}
         <div className="hidden sm:flex items-center gap-2 pl-3 pr-1">
@@ -357,7 +357,7 @@ export default function Guardians({ lang = 'IND' }) {
           {/* OFF */}
           <button
             onClick={() => setIsArmorEquipped(false)}
-            className={`relative z-10 min-w-[58px] px-3 py-1.5 rounded-full text-[9px] font-['Cinzel'] tracking-[0.15em] uppercase transition-all duration-300 ${
+            className={`relative z-10 min-w-[52px] sm:min-w-[58px] px-2.5 sm:px-3 py-1.5 rounded-full text-[9px] font-['Cinzel'] tracking-[0.15em] uppercase transition-all duration-300 ${
               !isArmorEquipped
                 ? "text-[#020604] font-bold"
                 : "text-[#718077] hover:text-[#d6dbc8]"
@@ -369,7 +369,7 @@ export default function Guardians({ lang = 'IND' }) {
           {/* ON */}
           <button
             onClick={() => setIsArmorEquipped(true)}
-            className={`relative z-10 min-w-[58px] px-3 py-1.5 rounded-full text-[9px] font-['Cinzel'] tracking-[0.15em] uppercase transition-all duration-300 ${
+            className={`relative z-10 min-w-[52px] sm:min-w-[58px] px-2.5 sm:px-3 py-1.5 rounded-full text-[9px] font-['Cinzel'] tracking-[0.15em] uppercase transition-all duration-300 ${
               isArmorEquipped
                 ? "text-[#020604] font-bold"
                 : "text-[#718077] hover:text-[#d6dbc8]"
@@ -397,7 +397,7 @@ export default function Guardians({ lang = 'IND' }) {
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-md max-h-[85vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl scrollbar-none"
+              className="w-full max-w-md max-h-[82svh] overflow-y-auto rounded-t-3xl sm:rounded-2xl scrollbar-none"
             >
               <GuardianInfoCard
                 selectedGuardian={selectedGuardian}
@@ -420,10 +420,10 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
       <motion.div
         key={selectedGuardian.id}
         initial={{ opacity: 0, scale: 0.95, y: -10 }}
-        animate={{ opacity: 1, scale: 1, y: -30 }} 
-        exit={{ opacity: 0, scale: 0.95, y: -45 }}
+        animate={{ opacity: 1, scale: 1, y: isMobile ? 0 : -30 }} 
+        exit={{ opacity: 0, scale: 0.95, y: isMobile ? 30 : -45 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="-mt-6 sm:-mt-10 bg-gradient-to-b from-[#06241b] via-[#03140f] to-[#010a07] backdrop-blur-2xl border border-amber-500/40 p-4 sm:p-6 rounded-2xl flex flex-col justify-between space-y-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.95)] relative overflow-hidden group"
+        className={`${isMobile ? "mt-0 rounded-t-3xl" : "-mt-6 sm:-mt-10 rounded-2xl"} bg-gradient-to-b from-[#06241b] via-[#03140f] to-[#010a07] backdrop-blur-2xl border border-amber-500/40 p-4 sm:p-6 flex flex-col justify-between space-y-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.95)] relative overflow-hidden group` }
       >
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:16px_16px]" />
