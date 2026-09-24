@@ -141,7 +141,7 @@ export default function LatestFromRealm({ lang = 'IND' }) {
     : currentArticles.filter(article => article.categoryKey === activeCategoryKey);
 
   return (
-    <section id="updates" className="relative py-20 px-6 md:px-12 bg-[#020704] text-[#e0e6db] font-serif overflow-hidden">
+    <section id="updates" className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#020704] text-[#e0e6db] font-serif overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#d4af37]/5 blur-[140px] pointer-events-none rounded-full" />
@@ -201,14 +201,23 @@ export default function LatestFromRealm({ lang = 'IND' }) {
           </div>
         </motion.div>
 
-        {/* Articles Cards Grid dengan Animasi Scroll */}
+        {/* Articles Cards Grid: Mode Scroll untuk Seluler, Grid Biasa untuk Tablet (md) & Desktop (lg) */}
         <motion.div 
           key={activeCategoryKey}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="
+            flex md:grid
+            overflow-x-auto md:overflow-visible
+            snap-x snap-mandatory md:snap-none
+            scrollbar-none
+            gap-5 md:gap-6 lg:gap-8
+            pb-4 md:pb-0
+            -mx-1 px-1
+            md:grid-cols-2 lg:grid-cols-3
+          "
         >
           {filteredArticles.map((article) => (
             <motion.article
@@ -216,14 +225,26 @@ export default function LatestFromRealm({ lang = 'IND' }) {
               variants={cardVariants}
               whileHover={{ y: -6 }}
               onClick={() => setSelectedArticle(article)}
-              className="group cursor-pointer relative flex flex-col bg-[#050e0a] border border-[#132a1e] hover:border-[#c8a961] transition-colors duration-500 rounded-sm overflow-hidden shadow-2xl hover:shadow-[0_10px_30px_rgba(200,169,97,0.2)]"
+              className="
+                group cursor-pointer relative flex flex-col
+                flex-shrink-0 md:flex-shrink
+                w-[86vw] sm:w-[70vw] md:w-auto
+                snap-center md:snap-align-none
+                bg-[#050e0a]
+                border border-[#132a1e]
+                hover:border-[#c8a961]
+                transition-colors duration-500
+                rounded-sm overflow-hidden
+                shadow-2xl
+                hover:shadow-[0_10px_30px_rgba(200,169,97,0.2)]
+              "
             >
               {/* Corner Ornaments */}
               <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#c8a961]/0 group-hover:border-[#c8a961] transition-all duration-300 z-20" />
               <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#c8a961]/0 group-hover:border-[#c8a961] transition-all duration-300 z-20" />
 
               {/* Image Container */}
-              <div className="relative h-60 w-full overflow-hidden bg-[#020704]">
+              <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-[#020704]">
                 <img
                   src={article.image}
                   alt={article.title}
@@ -269,6 +290,20 @@ export default function LatestFromRealm({ lang = 'IND' }) {
             </motion.article>
           ))}
         </motion.div>
+
+        {/* Mobile slide indicator (Disembunyikan di Tablet & Desktop) */}
+        <div className="flex md:hidden justify-center items-center gap-1.5 mt-2">
+          {filteredArticles.map((article, index) => (
+            <span
+              key={article.id}
+              className={`h-1 rounded-full transition-all duration-300 ${
+                index === 0
+                  ? "w-6 bg-[#c8a961]"
+                  : "w-1.5 bg-[#c8a961]/30"
+              }`}
+            />
+          ))}
+        </div>
 
       </div>
 
