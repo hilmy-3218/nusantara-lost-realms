@@ -1,20 +1,69 @@
-<<<<<<< HEAD
-# nusantara-lost-realms
-=======
-# React + Vite
+NUSANTARA: LOST REALMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An Immersive Gaming Experience Through Web Technology
 
-Currently, two official plugins are available:
+Nusantara: Lost Realms adalah sebuah immersive interactive web experience yang mengangkat dunia fantasi Nusantara melalui perpaduan storytelling, visual cinematic, interactive exploration, animation, dan web technology.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pemain diajak memasuki dunia Nusantara yang telah dikutuk selama berabad-abad dan menjelajahi berbagai wilayah misterius bersama empat Guardian dengan kemampuan serta peran yang berbeda.
 
-## React Compiler
+🎮 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌲 Immersive World
+Eksplorasi dunia fantasi yang terinspirasi dari kekayaan Nusantara.
+Visual dark fantasy dengan nuansa cinematic.
 
-## Expanding the ESLint configuration
+🧙 Four Guardians
+Pemain dapat mengenal dan berpindah antar Guardian.
+Setiap Guardian memiliki role, senjata, dan kemampuan yang berbeda.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> ba6b0e3 (push projek)
+🗺️ World Exploration
+Verdant Wilds
+Alcapura Ruins
+Mount Arunika
+Telaga Niskala
+Rimba Kala
+Skyreach Peaks
+Vantara Kingdom
+Throne of Ruin
+
+📖 Interactive Lore
+Cerita dibangun melalui beberapa bagian perjalanan.
+Pemain dapat mengikuti perjalanan menuju pusat kutukan Nusantara.
+
+⚔️ Guardian Switching
+Perpindahan Guardian secara langsung untuk menyesuaikan situasi permainan.
+
+🎵 Immersive Audio
+Background music dan sound effect untuk memperkuat atmosfer dunia.
+
+✨ Interactive Animation
+Scroll animation
+Transition
+Interactive UI
+Cinematic entrance
+
+🌐 Multilingual Interface
+Bahasa Indonesia
+English
+
+📱 Responsive Design
+Dioptimalkan untuk desktop, tablet, dan perangkat mobile.
+
+🧙 The Four Guardians
+
+⚔️ Raka — KSATRIA
+Weapon: Pedang Agung Pembalasan
+Arka adalah seorang Ksatria yang mengandalkan kekuatan dan kemampuan bertarung jarak dekat.
+
+🏹 Kirana — PENJELAJAH
+Weapon: Busur Runic Recurve
+Ability: Hujan Arunika
+Lara memiliki kemampuan menyerang dari jarak jauh dengan mobilitas tinggi.
+
+🗡️ Arya — PENGINTIP
+Weapon: Tombak
+Raka berperan sebagai pengintai yang mengandalkan kecepatan, jarak, dan ketepatan dalam menghadapi ancaman.
+
+⚔️ Tara Maheswari — PENARI BILAH
+Weapon: Sepasang Pedang Kembar
+Tara menggunakan dua pedang untuk menghasilkan serangan cepat dan agresif.
