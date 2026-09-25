@@ -88,7 +88,7 @@ const systemsTranslations = {
       {
         id: 'switching',
         title: 'BERGANTI',
-        summary: 'Beralih di antara Empat Penjaga dan manfaatkan kemampuan unik mereka.',
+        summary: 'Beralih di antara Empat Penjaga dan manfaatkan kemampuan unik meeka.',
         headline: 'BERGANTI PENJAGA. SATUKAN KEKUATAN MEREKA.',
         description: 'Kendalikan Empat Penjaga dengan kemampuan, senjata, dan gaya bertarung yang berbeda. Beralih secara langsung untuk menyesuaikan strategi dan mengatasi berbagai rintangan.',
         mechanicTitle: 'Guardian Switching',
@@ -266,40 +266,40 @@ export default function GameSystems({ lang = 'IND' }) {
   const activeStyle = pillarStyles[currentPillar.id] || pillarStyles.explore;
 
   return (
-    <section id="systems" className="py-10 md:py-20 px-3 sm:px-6 lg:px-16 bg-[#040a06] relative overflow-hidden">
+    <section id="systems" className="py-16 md:py-28 px-3 sm:px-6 lg:px-16 bg-[#040a06] relative">
       {/* Dynamic Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] sm:w-[500px] md:w-[700px] h-[300px] bg-emerald-900/10 blur-[90px] md:blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10 space-y-6 md:space-y-12">
-        {/* Header Section */}
+      <div className="max-w-7xl mx-auto relative z-10 space-y-10 md:space-y-14">
+        {/* Header Section - Diberi relative dan z-10 agar selalu berada di ATAS kartu saat di-hover */}
         <motion.header 
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center space-y-2 md:space-y-4 max-w-4xl mx-auto"
+          className="text-center space-y-4 max-w-4xl mx-auto relative z-10 pt-4"
         >
-          <div className="inline-flex items-center gap-1.5 text-[9px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-emerald-400 uppercase bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-800/40">
+          <div className="inline-flex items-center gap-1.5 text-[9px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-emerald-400 uppercase bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-800/40">
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             <span>{t.tagline}</span>
           </div>
 
-          <h2 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black tracking-tight text-white leading-tight uppercase">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black tracking-tight text-white uppercase leading-[1.15] sm:leading-[1.2] py-1">
             {t.title}
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto font-light leading-relaxed px-1">
+          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto font-light leading-relaxed px-2">
             {t.subtitle}
           </p>
         </motion.header>
 
-        {/* Pillars Tab Options (Scroll Horisontal di Mobile, Grid di Tablet/Desktop) */}
+        {/* Pillars Tab Options - Diberi mt-6 agar ada jarak aman dari subtitle */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 overflow-x-auto pb-2 sm:pb-0 scrollbar-none snap-x snap-mandatory -mx-3 px-3 sm:mx-0 sm:px-0"
+          className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 overflow-x-auto pb-4 pt-2 sm:pb-0 scrollbar-none snap-x snap-mandatory -mx-3 px-3 sm:mx-0 sm:px-0 mt-6"
         >
           {t.pillars.map((pillar) => {
             const isActive = activeTab === pillar.id;
@@ -312,7 +312,7 @@ export default function GameSystems({ lang = 'IND' }) {
                 onClick={() => setActiveTab(pillar.id)}
                 whileHover={{ scale: 1.01, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className={`snap-center shrink-0 w-[220px] sm:w-auto text-left p-3.5 sm:p-5 rounded-xl border transition-all duration-300 relative flex flex-col justify-between backdrop-blur-md group ${
+                className={`snap-center shrink-0 w-[220px] sm:w-auto text-left p-3.5 sm:p-5 rounded-xl border transition-all duration-300 relative flex flex-col justify-between backdrop-blur-md group hover:z-10 ${
                   isActive
                     ? `bg-[#0d1410] ${style.glowColor}`
                     : 'bg-[#0a0f0c]/60 border-emerald-900/20 hover:border-emerald-700/40 hover:bg-[#0d1410]/50'
@@ -419,7 +419,7 @@ export default function GameSystems({ lang = 'IND' }) {
         </motion.div>
       </div>
 
-      {/* Gameplay Detail Modal (Bottom Sheet di Mobile, Centered Modal di Desktop) */}
+      {/* Gameplay Detail Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div 
@@ -437,7 +437,6 @@ export default function GameSystems({ lang = 'IND' }) {
               transition={{ type: "spring", damping: 25, stiffness: 280 }}
               className="bg-[#0b120e] border-t sm:border border-emerald-800/50 rounded-t-2xl sm:rounded-2xl max-w-2xl w-full p-4 sm:p-6 md:p-8 relative shadow-2xl space-y-3 sm:space-y-6 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar z-10"
             >
-              {/* Sticky Close Button */}
               <button 
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white bg-emerald-950/80 p-1.5 sm:p-2 rounded-full border border-emerald-800/40 transition-colors z-10"
