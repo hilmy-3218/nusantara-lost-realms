@@ -256,15 +256,16 @@ export default function Guardians({ lang = 'IND' }) {
                 {selectedGuardian.name}
               </h3>
             </div>
-
-            <div className="flex lg:flex-col gap-2 sm:gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-none justify-center lg:justify-start px-3 sm:px-0 snap-x snap-mandatory">
+          
+            {/* Tambahkan pt-2 agar ada ruang di bagian atas saat tombol membesar (scale) di mobile */}
+            <div className="flex lg:flex-col gap-2 sm:gap-3 overflow-x-auto lg:overflow-visible pt-2 pb-2 lg:pt-0 lg:pb-0 scrollbar-none justify-start lg:justify-start px-3 sm:px-0 snap-x snap-mandatory">
               {content.list.map((guardian, idx) => {
                 const isActive = selectedIndex === idx;
                 return (
                   <button
                     key={guardian.id}
                     onClick={() => setSelectedIndex(idx)}
-                    className={`flex-shrink-0 flex items-center gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-xl transition-all duration-300 border text-left relative group snap-center ${
+                    className={`flex-shrink-0 flex items-center gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-xl transition-all duration-300 border text-left relative group snap-center origin-bottom lg:origin-center ${
                       isActive
                         ? "border-amber-400 bg-stone-900/90 shadow-[0_0_15px_rgba(217,119,6,0.3)] backdrop-blur-md scale-105 lg:scale-100"
                         : "border-emerald-950/80 bg-stone-950/70 hover:bg-stone-900/50 hover:border-amber-600/40 backdrop-blur-sm opacity-80"
@@ -276,7 +277,7 @@ export default function Guardians({ lang = 'IND' }) {
                         className="hidden lg:block absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-amber-300 via-amber-500 to-emerald-600"
                       />
                     )}
-
+          
                     <div className={`w-12 h-12 sm:w-12 sm:h-12 relative overflow-hidden rounded-lg border-2 flex-shrink-0 transition-all ${
                       isActive ? "border-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.5)]" : "border-emerald-900/50"
                     }`}>
@@ -288,7 +289,7 @@ export default function Guardians({ lang = 'IND' }) {
                         }`}
                       />
                     </div>
-
+          
                     <div className="truncate hidden lg:block pr-2">
                       <div className={`text-xs font-bold tracking-wider uppercase truncate ${isActive ? "text-amber-300" : "text-stone-300"}`}>
                         {guardian.name}
