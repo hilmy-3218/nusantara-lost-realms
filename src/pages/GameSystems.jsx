@@ -9,8 +9,8 @@ import switching from '../assets/gameplay/guardiant_switching.jpg';
 const systemsTranslations = {
   IND: {
     tagline: 'MISTIK & SISTEM AKSI PETUALANGAN ALAM KUNO',
-    title: 'ALAM NUSANTARA TIDAK MENGENAL AMPUN.',
-    subtitle: 'Bertahan hidup di kepulauan yang terisolasi membutuhkan penguasaan olah kanuragan, kelincahan menjelajah reruntuhan candi, dan keselarasan energi gaib nusantara.',
+    title: 'ALAM NUSANTARA TIDAK MENGENAL AMPUN',
+    subtitle: 'Bertahan hidup di kepulauan yang terisolasi membutuhkan penguasaan olah kanuragan, kelincahan menjelajah reruntuhan candi, dan keselarasan energi gaib nusantara',
     closeText: 'METERAI DETAIL',
     pillars: [
       {
@@ -113,8 +113,8 @@ const systemsTranslations = {
   },
   ENG: {
     tagline: 'MYSTICAL ANCIENT NUSANTARA ACTION SYSTEMS',
-    title: 'THE NUSANTARA REALM SHOWS NO MERCY.',
-    subtitle: 'Surviving the lost tropical realm demands mastery of ancient martial arts, agile parkour across temple ruins, and harmony with mystical island energy.',
+    title: 'THE NUSANTARA REALM SHOWS NO MERCY',
+    subtitle: 'Surviving the lost tropical realm demands mastery of ancient martial arts, agile parkour across temple ruins, and harmony with mystical island energy',
     closeText: 'SEAL DETAILS',
     pillars: [
       {
