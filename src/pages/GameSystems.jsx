@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, Sparkles, X, Eye } from 'lucide-react';
+import { CheckCircle2, Sparkles, X, Eye, Compass, Shield, Scroll, Repeat, ArrowUpRight } from 'lucide-react';
 import explore from '../assets/gameplay/explore.jpg';
 import survive from '../assets/gameplay/survive.jpg';
 import discover from '../assets/gameplay/discover.jpg';
@@ -8,208 +8,208 @@ import switching from '../assets/gameplay/guardiant_switching.jpg';
 
 const systemsTranslations = {
   IND: {
-    tagline: 'SISTEM AKSI PETUALANGAN GENERASI BARU',
-    title: 'ALAM INI TIDAK MENGENAL AMPUN.',
-    subtitle: 'Bertahan hidup di kepulauan yang hilang membutuhkan penguasaan parkour tanpa celah, kuda-kuda kinetik presisi, dan keselarasan astronomi kuno.',
-    closeText: 'TUTUP DETAIL',
+    tagline: 'MISTIK & SISTEM AKSI PETUALANGAN ALAM KUNO',
+    title: 'ALAM NUSANTARA TIDAK MENGENAL AMPUN.',
+    subtitle: 'Bertahan hidup di kepulauan yang terisolasi membutuhkan penguasaan olah kanuragan, kelincahan menjelajah reruntuhan candi, dan keselarasan energi gaib nusantara.',
+    closeText: 'METERAI DETAIL',
     pillars: [
       {
         id: 'explore',
         title: 'JELAJAH',
-        summary: 'Jelajahi hutan purba, reruntuhan tersembunyi, dan wilayah yang belum tersentuh.',
-        headline: 'TEMUKAN JALAN YANG TAK PERNAH TERCATAT DI PETA.',
-        description: 'Jelajahi dunia Nusantara: Lost Realm secara bebas tanpa dipaksa mengikuti jalur utama. Temukan reruntuhan kerajaan kuno, gua tersembunyi, desa yang terlupakan, dan tempat-tempat sakral melalui petunjuk yang ada di lingkungan.',
-        mechanicTitle: 'Eksplorasi Berbasis Lingkungan',
+        summary: 'Lintasi hutan rimba purba, reruntuhan candi, dan rimba mistis.',
+        headline: 'TEMUKAN JALAN YANG TERHAPUS DARI PRASASTI KUNO.',
+        description: 'Jelajahi keajaiban Nusantara secara bebas. Temukan reruntuhan kerajaan yang tenggelam, gua-gua sakral, dan tempat peristirahatan para dewa melalui penanda alam.',
+        mechanicTitle: 'Eksplorasi Jelajah Alam Bebas',
         mechanicTag: 'FREE EXPLORATION SYSTEM',
         image: explore,
         features: [
-          'Eksplorasi Bebas Tanpa Jalur Utama yang Kaku',
-          'Rahasia & Lokasi Tersembunyi via Petunjuk Lingkungan',
-          'Perubahan Cuaca & Alam Mempengaruhi Eksplorasi'
+          'Eksplorasi Tanpa Jalur Kaku via Penanda Alam',
+          'Rahasia Prasasti & Tembalang Tersembunyi',
+          'Pengaruh Iklim Tropis & Perubahan Cuaca Gaib'
         ],
         deepDetail: {
-          overview: 'Pemain tidak selalu diberi penanda lokasi atau arah yang jelas. Dunia dirancang agar pemain memperhatikan lingkungan dan menemukan sendiri tempat-tempat yang tersembunyi.',
+          overview: 'Dunia Nusantara dirancang tanpa petunjuk modern. Kepekaan mata dan telinga pemain dalam membaca angin, arus air, dan ukiran batu kuno adalah kunci utama penjelajahan.',
           mechanics: [
-            'Petunjuk Lingkungan: Gunakan jejak kaki, suara, cahaya, aliran air, ukiran kuno, dan perubahan vegetasi.',
-            'Eksplorasi Vertikal: Panjat tebing, melintasi akar pohon, menyeberangi sungai, dan memasuki celah sempit.',
-            'Dunia yang Bereaksi: Kabut, hujan, angin, dan kondisi alam dapat membuka atau menutup jalur tertentu.',
-            'Penemuan Rahasia: Temukan reruntuhan, artefak kuno, dan tempat sakral tersembunyi.'
+            'Petunjuk Lingkungan: Amati jejak pusaka, cahaya ilusi, gemerisik dedaunan, dan ukiran aksara kuno.',
+            'Kelincahan Kanuragan: Memanjat tebing terjal, meniti akar pohon raksasa, dan menyeberangi jurang purba.',
+            'Reaksi Kodrat Alam: Hujan lebat, kabut mistis, dan gerhana dapat membongkar atau menyembunyikan portal rahasia.',
+            'Penemuan Pusaka: Temukan artefak legendaris dan altar pemujaan yang terlupakan.'
           ]
         }
       },
       {
         id: 'survive',
         title: 'BERTAHAN',
-        summary: 'Hadapi makhluk buas, lingkungan berbahaya, dan ancaman yang menguasai wilayah.',
-        headline: 'BERTAHAN HIDUP DI TANAH YANG TIDAK MENGENAL AMPUN.',
-        description: 'Setiap wilayah memiliki ancaman yang berbeda. Hadapi makhluk liar, hindari bahaya alam, kelola stamina, dan manfaatkan lingkungan untuk bertahan hidup.',
-        mechanicTitle: 'Sistem Survival Adaptif',
+        summary: 'Hadapi ancaman makhluk gaib dan keganasan rimba nusantara.',
+        headline: 'BERTAHAN HIDUP DI TANAH YANG DIPENUHI SUMPAH KUNO.',
+        description: 'Setiap jengkal tanah menyimpan bahaya. Hadapi binatang purba dan siluman penjaga, kelola stamina batin, serta manfaatkan flora mistis untuk bertahan.',
+        mechanicTitle: 'Sistem Survival & Kanuragan Adaptif',
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
         features: [
-          'Pertarungan Real-Time Melawan Makhluk Penguasa Wilayah',
-          'Pemanfaatan Lingkungan untuk Bertahan & Mengendalikan Musuh',
-          'Pengelolaan Stamina, Kondisi Karakter, dan Sumber Daya'
+          'Pertarungan Real-Time Melawan Makhluk Penjaga Wilayah',
+          'Taktik Lingkungan & Pemanfaatan Flora Herbal Mistik',
+          'Pengelolaan Tenaga Dalam, Stamina, dan Ketahanan Tubuh'
         ],
         deepDetail: {
-          overview: 'Bertahan hidup bukan hanya tentang mengalahkan musuh. Pemain harus memahami lingkungan, membaca pola ancaman, mengatur stamina, dan menggunakan kondisi sekitar.',
+          overview: 'Bertahan bukan sekadar mengayunkan senjata. Pemain harus membaca gerakan lawan, mengatur hawa murni, serta memanfaatkan kontur tanah.',
           mechanics: [
-            'Combat & Evasion: Serang, bertahan, menghindar, dan cari celah berdasarkan pola serangan musuh.',
-            'Environmental Survival: Gunakan pepohonan, batu, sungai, dan tebing untuk kontrol area.',
-            'Resource Management: Kelola stamina, perlengkapan, dan sumber daya perjalanan.',
-            'Threat Awareness: Kenali tanda keberadaan makhluk sebelum menghadapi mereka.'
+            'Jurus & Menghindar: Baca pola serangan musuh, hindari racun gaib, dan balikkan keadaan dengan serangan balasan.',
+            'Siasat Medan Tempur: Manfaatkan tebing tinggi, rawa beracun, dan reruntuhan batu sebagai perisai.',
+            'Manajemen Sumber Daya: Racik ramuan dari tumbuhan langka dan jaga ketahanan stamina fisik.',
+            'Intuisi Gaib: Rasakan getaran keberadaan musuh sebelum mereka menyerang dari kegelapan.'
           ]
         }
       },
       {
         id: 'discover',
-        title: 'TEMUKAN',
-        summary: 'Ungkap rahasia peradaban kuno melalui artefak, prasasti, dan teka-teki.',
-        headline: 'UNGKAP RAHASIA YANG TERKUBUR SELAMA RATUSAN TAHUN.',
-        description: 'Temukan jejak peradaban yang telah lama hilang melalui prasasti kuno, artefak, reruntuhan, dan simbol misterius. Pecahkan teka-teki untuk mengungkap rahasia Lost Realm.',
-        mechanicTitle: 'Sistem Investigasi & Rekonstruksi Sejarah',
+        title: 'SINGKAP',
+        summary: 'Pecahkan teka-teki prasasti dan bangkitkan rahasia peradaban tua.',
+        headline: 'SINGKAP RAHASIA YANG TERKUBUR DI BALIK RERUNTUHAN CANDI.',
+        description: 'Rangkai potongan kisah peradaban yang musnah melalui prasasti kuno, relief sakral, dan manuskrip lontar untuk mengakhiri kutukan tanah Nusantara.',
+        mechanicTitle: 'Rekonstruksi Lore & Teka-Teki Candi',
         mechanicTag: 'DISCOVERY & PUZZLE SYSTEM',
         image: discover,
         features: [
-          'Investigasi Artefak, Prasasti, dan Reruntuhan Kuno',
-          'Teka-Teki Lingkungan Terhubung dengan Sejarah Dunia',
-          'Pengumpulan Petunjuk untuk Mengungkap Lore & Rahasia'
+          'Investigasi Relief Candi, Artefak, dan Arca Kuno',
+          'Teka-Teki Tata Surya & Tata Ruang Kerajaan Tua',
+          'Pengumpulkan Fragments Lontar Rahasia Nusantara'
         ],
         deepDetail: {
-          overview: 'Tidak semua rahasia Lost Realm dijelaskan secara langsung. Pemain harus mengamati lingkungan, menemukan petunjuk tersembunyi, dan menghubungkan peninggalan kuno.',
+          overview: 'Sejarah Nusantara tidak tertulis secara lugas. Anda harus mengamati simbol sakral, menyusun mekanisme batu kuno, dan memecahkan teka-teki elemen.',
           mechanics: [
-            'Environmental Investigation: Periksa prasasti, patung, artefak, dan simbol kuno.',
-            'Ancient Puzzle: Pecahkan mekanisme kuno, susunan simbol, dan pola cahaya.',
-            'Clue Collection: Kumpulkan dan hubungkan potongan informasi dari berbagai lokasi.',
-            'Lore Reconstruction: Susun kembali sejarah kerajaan kuno dan asal-usul kutukan.'
+            'Observasi Prasasti: Amati ukiran simbol kuno, arca dewa, dan susunan batu magis.',
+            'Mekanisme Batu Kuno: Putar altar cermin, selaraskan pantulan cahaya matahari, dan buka gerbang rahasia.',
+            'Pencarian Serpihan Lontar: Kumpulkan catatan masa lalu untuk memahami silsilah para dewa dan raja.',
+            'Ritus Pembebasan: Bangkitkan energi tempat sakral untuk menetralkan kabut kegelapan.'
           ]
         }
       },
       {
         id: 'switching',
-        title: 'BERGANTI',
-        summary: 'Beralih di antara Empat Penjaga dan manfaatkan kemampuan unik meeka.',
-        headline: 'BERGANTI PENJAGA. SATUKAN KEKUATAN MEREKA.',
-        description: 'Kendalikan Empat Penjaga dengan kemampuan, senjata, dan gaya bertarung yang berbeda. Beralih secara langsung untuk menyesuaikan strategi dan mengatasi berbagai rintangan.',
-        mechanicTitle: 'Guardian Switching',
+        title: 'PENJAGA',
+        summary: 'Beralih di antara Empat Guardian dengan pusaka & ajian unik.',
+        headline: 'SATUKAN EMPAT KEKUATAN GUARDIAN PENJAGA ALAM.',
+        description: 'Kendalikan Empat Penjaga Nusantara yang dianugerahi senjata pusaka dan ajian magis berbeda. Beralih secara instan dalam pertarungan untuk menciptakan kombo mematikan.',
+        mechanicTitle: 'Sistem Berganti Penjaga Mistik',
         mechanicTag: 'DYNAMIC GUARDIAN SYSTEM',
         image: switching,
         features: [
-          'Pergantian Empat Guardian Secara Langsung (Instant Switch)',
-          'Kemampuan & Gaya Bertarung Unik Setiap Guardian',
-          'Kombinasi Sinergi Kemampuan untuk Mengatasi Rintangan'
+          'Pergantian 4 Penjaga Secara Instan Tanpa Jeda Action',
+          'Senjata Pusaka & Ajian Khusus Masing-masing Penjaga',
+          'Sinergi Kombo Mistik untuk Menembus Pertahanan Musuh'
         ],
         deepDetail: {
-          overview: 'Empat Guardian adalah bagian dari satu sistem gameplay terpadu. Pemain harus memilih Guardian yang tepat berdasarkan situasi pertarungan dan eksplorasi.',
+          overview: 'Empat Penjaga mewakili empat elemen utama Nusantara. Keahlian Anda mengganti Penjaga saat bertarung menjadi faktor penentu kemenangan.',
           mechanics: [
-            'Instant Switching: Beralih antar Guardian secara langsung tanpa memutus alur aksi.',
-            'Unique Abilities: Setiap Guardian memiliki peran, senjata, dan skill yang berbeda.',
-            'Strategic Switching: Gunakan Guardian yang paling responsif terhadap tipe ancaman tertentu.',
-            'Ability Combination: Gabungkan skill beberapa Guardian untuk eksekusi kombo berantai.'
+            'Instant Switch: Berpindah Guardian secara cepat di tengah pertarungan tanpa memutus alur serangan.',
+            'Ajian & Pusaka Unik: Setiap Penjaga membawa keris, tombak, atau ajian tak kasat mata yang spesifik.',
+            'Taktik Elemen: Gunakan Guardian pemukul jarak dekat untuk merusak perisai, lalu ganti ke Guardian sihir untuk mengeksekusi.',
+            'Kombo Berantai: Gabungkan skill Penjaga secara berurutan untuk menciptakan ledakan energi gaib.'
           ]
         }
       }
     ]
   },
   ENG: {
-    tagline: 'NEXT-GEN ACTION ADVENTURE SYSTEMS',
-    title: 'THE REALM DOES NOT FORGIVE.',
-    subtitle: 'Surviving the lost archipelago requires mastering seamless parkour, precision kinetic stances, and ancient astronomical alignment.',
-    closeText: 'CLOSE DETAILS',
+    tagline: 'MYSTICAL ANCIENT NUSANTARA ACTION SYSTEMS',
+    title: 'THE NUSANTARA REALM SHOWS NO MERCY.',
+    subtitle: 'Surviving the lost tropical realm demands mastery of ancient martial arts, agile parkour across temple ruins, and harmony with mystical island energy.',
+    closeText: 'SEAL DETAILS',
     pillars: [
       {
         id: 'explore',
         title: 'EXPLORE',
-        summary: 'Explore ancient forests, hidden ruins, and untouched territories.',
-        headline: 'DISCOVER PATHS THAT WERE NEVER MARKED ON ANY MAP.',
-        description: 'Explore the world of Nusantara: Lost Realm freely without being forced to follow a fixed main path. Discover ancient kingdom ruins, hidden caves, and sacred places through environmental clues.',
-        mechanicTitle: 'Environment-Based Exploration',
+        summary: 'Traverse ancient jungles, forgotten temples, and mystical realms.',
+        headline: 'DISCOVER PATHS ERASED FROM ANCIENT STONE INSCRIPTIONS.',
+        description: 'Roam the enchanted islands freely. Discover sunken kingdom ruins, sacred caves, and forgotten shrines guided only by environmental markers.',
+        mechanicTitle: 'Free Realm Exploration',
         mechanicTag: 'FREE EXPLORATION SYSTEM',
         image: explore,
         features: [
-          'Free Exploration Without a Strict Main Path',
-          'Hidden Secrets Discovered Through Environmental Clues',
-          'Changing Weather & Dynamic Environmental Impacts'
+          'Unstructured Exploration Guided by Nature Signs',
+          'Hidden Inscriptions & Ancient Sacred Sites',
+          'Tropical Weather Dynamics & Mystical Phenomena'
         ],
         deepDetail: {
-          overview: 'Players are not always given clear location markers. The world is designed to encourage players to observe their surroundings and discover secrets independently.',
+          overview: 'No modern waypoints exist in Nusantara. Your perception of environmental cues like wind direction, ancient carvings, and water flows dictates your survival.',
           mechanics: [
-            'Environmental Clues: Use footprints, sounds, light, flowing water, and ancient carvings.',
-            'Vertical Exploration: Climb cliffs, traverse tree roots, cross rivers, and enter narrow passages.',
-            'A Reactive World: Fog, rain, wind, and conditions open or block paths dynamically.',
-            'Secret Discoveries: Uncover optional ruins, ancient artifacts, and sacred sites.'
+            'Environmental Clues: Observe ancient runes, phantom lights, rustling flora, and footprint trails.',
+            'Agile Traversing: Scale steep cliffs, navigate gigantic roots, and leap over misty chasms.',
+            'A Reactive World: Torrential rain, eclipse phases, and mystical fogs dynamically reveal or seal hidden paths.',
+            'Artifact Discoveries: Unearth legendary relics and forgotten altars.'
           ]
         }
       },
       {
         id: 'survive',
         title: 'SURVIVE',
-        summary: 'Face savage creatures, dangerous environments, and territorial threats.',
-        headline: 'SURVIVE IN A LAND THAT SHOWS NO MERCY.',
-        description: 'Every territory presents distinct threats. Face wild creatures, avoid hazards, manage stamina, and use surroundings to survive.',
-        mechanicTitle: 'Adaptive Survival System',
+        summary: 'Confront mythical beasts and the untamed wilderness.',
+        headline: 'SURVIVE UPON LANDS BOUND BY ANCIENT CURSES.',
+        description: 'Danger lurks in every shadow. Face savage beasts and territorial spirits, balance your inner stamina, and utilize rare herbs to endure.',
+        mechanicTitle: 'Adaptive Combat & Survival',
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
         features: [
-          'Real-Time Combat Against Territorial Creatures',
-          'Environmental Tactics for Survival and Evasion',
-          'Stamina, Condition, and Resource Management'
+          'Real-Time Combat Against Territorial Mythical Beasts',
+          'Environmental Hazards & Mystical Herbal Crafting',
+          'Inner Energy, Stamina, and Vitality Management'
         ],
         deepDetail: {
-          overview: 'Survival goes beyond defeating enemies. Players must read threat patterns, manage resources, and leverage surroundings.',
+          overview: 'Survival relies on more than raw force. Read enemy movements, channel inner energy, and use terrain to outsmart deadly threats.',
           mechanics: [
-            'Combat & Evasion: Attack, defend, dodge, and counter based on creature patterns.',
-            'Environmental Survival: Utilize terrain, foliage, and cliffs for tactical control.',
-            'Resource Management: Maintain stamina and equipment during long journeys.',
-            'Threat Awareness: Recognize environmental signs before entering combat.'
+            'Tactical Evasion: Read beast attack patterns, dodge dark magic, and strike weak points.',
+            'Terrain Mastery: Use cliff edges, toxic swamps, and stone pillars as cover.',
+            'Resource Crafting: Brew remedies using rare tropical herbs and conserve stamina.',
+            'Spiritual Intuition: Sense hostile presence before ambush strikes.'
           ]
         }
       },
       {
         id: 'discover',
         title: 'DISCOVER',
-        summary: 'Uncover ancient civilization secrets through artifacts and puzzles.',
-        headline: 'UNCOVER SECRETS BURIED FOR HUNDREDS OF YEARS.',
-        description: 'Discover the remnants of a long-lost civilization through inscriptions, artifacts, and puzzles to piece together the Lost Realm lore.',
-        mechanicTitle: 'Investigation & History System',
+        summary: 'Solve ancient temple puzzles and unearth lost civilization lore.',
+        headline: 'UNCOVER SECRETS BURIED BENEATH TEMPLE RUINS.',
+        description: 'Piece together a fallen civilization history through stone inscriptions, sacred reliefs, and palm-leaf manuscripts to break the ancient curse.',
+        mechanicTitle: 'Temple Puzzle & Lore Investigation',
         mechanicTag: 'DISCOVERY & PUZZLE SYSTEM',
         image: discover,
         features: [
-          'Investigate Ancient Artifacts, Inscriptions, & Ruins',
-          'Environmental Puzzles Connected to World History',
-          'Clue Collection to Uncover Lost Realm Lore'
+          'Investigate Temple Reliefs, Relics, and Sacred Statues',
+          'Astral Alignment & Ancient Temple Puzzles',
+          'Collect Forgotten Palm-Leaf Manuscripts'
         ],
         deepDetail: {
-          overview: 'Lore is uncovered actively. Players observe surroundings, connect findings, and solve ancient mechanisms.',
+          overview: 'Nusantara history is veiled in mystery. Decode sacred symbols, align ancient mirror mechanisms, and solve elemental puzzles.',
           mechanics: [
-            'Environmental Investigation: Examine ancient symbols, statues, and ruins.',
-            'Ancient Puzzles: Solve mechanical puzzles, light alignments, and symbol arrays.',
-            'Clue Collection: Gather scattered info fragments to reveal underlying truths.',
-            'Lore Reconstruction: Reconstruct ancient kingdom history and curse origins.'
+            'Relic Inspection: Study ancient stone symbols, deity statues, and magic arrays.',
+            'Ancient Mechanisms: Rotate light-reflecting altars and realign stone portals.',
+            'Manuscript Collection: Gather scattered lontar leaves to reconstruct lore.',
+            'Purification Rituals: Reactivate sacred altars to dispel demonic miasma.'
           ]
         }
       },
       {
         id: 'switching',
-        title: 'SWITCH',
-        summary: 'Switch between Four Guardians and leverage their unique traits.',
-        headline: 'SWITCH GUARDIANS. UNITE THEIR POWER.',
-        description: 'Control Four Guardians with distinct skills and combat styles. Switch seamlessly to adapt strategies and solve environmental challenges.',
-        mechanicTitle: 'Guardian Switching',
+        title: 'GUARDIANS',
+        summary: 'Switch instantly between Four Guardians with unique relics & arts.',
+        headline: 'UNITE THE FOUR GUARDIAN FORCES OF NUSANTARA.',
+        description: 'Control Four Realm Guardians endowed with unique weapons and mystical arts. Seamlessly switch mid-combat to execute devastating synergy combos.',
+        mechanicTitle: 'Dynamic Guardian Switch System',
         mechanicTag: 'DYNAMIC GUARDIAN SYSTEM',
         image: switching,
         features: [
-          'Instant Real-Time Guardian Switching',
-          'Unique Weapons, Skills, & Playstyles per Guardian',
-          'Ability Sinnergy to Overcome Complex Obstacles'
+          'Instant Real-Time Switching with No Action Delay',
+          'Unique Relic Weapons & Mystical Arts per Guardian',
+          'Synergistic Elemental Combos to Shatter Defenses'
         ],
         deepDetail: {
-          overview: 'The Four Guardians form a unified tactical dynamic. Choose the right Guardian based on enemy types and environmental needs.',
+          overview: 'The Four Guardians wield the primary elements of the realm. Master swapping them dynamically during intense battles.',
           mechanics: [
-            'Instant Switching: Transition between Guardians without breaking combat flow.',
-            'Unique Abilities: Tailored combat roles and utility for each Guardian.',
-            'Strategic Switching: Counter specific threats with appropriate Guardian traits.',
-            'Ability Combination: Chain abilities together for devastating tactical setups.'
+            'Instant Transition: Switch Guardians effortlessly without breaking combat momentum.',
+            'Relics & Martial Arts: Utilize kris daggers, spears, or mystical energy fields.',
+            'Elemental Strategy: Use heavy Guardians to shatter armor, then swap to magical Guardians to execute.',
+            'Chained Combos: Chain Guardian skills sequentially for explosive elemental bursts.'
           ]
         }
       }
@@ -219,24 +219,32 @@ const systemsTranslations = {
 
 const pillarStyles = {
   explore: {
-    glowColor: 'shadow-[0_0_25px_-5px_rgba(16,185,129,0.3)] border-emerald-500/50',
-    dotColor: 'bg-emerald-400',
-    badgeColor: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+    borderGlow: 'border-emerald-500/50 shadow-[0_0_25px_-5px_rgba(16,185,129,0.3)]',
+    dotColor: 'bg-emerald-400 shadow-[0_0_10px_#34d399]',
+    badgeBg: 'bg-emerald-950/80 text-emerald-400 border-emerald-500/40',
+    accentText: 'text-emerald-400',
+    icon: Compass
   },
   survive: {
-    glowColor: 'shadow-[0_0_25px_-5px_rgba(245,158,11,0.3)] border-amber-500/50',
-    dotColor: 'bg-amber-400',
-    badgeColor: 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+    borderGlow: 'border-amber-500/50 shadow-[0_0_25px_-5px_rgba(245,158,11,0.3)]',
+    dotColor: 'bg-amber-400 shadow-[0_0_10px_#fbbf24]',
+    badgeBg: 'bg-amber-950/80 text-amber-400 border-amber-500/40',
+    accentText: 'text-amber-400',
+    icon: Shield
   },
   discover: {
-    glowColor: 'shadow-[0_0_25px_-5px_rgba(234,179,8,0.3)] border-yellow-500/50',
-    dotColor: 'bg-yellow-400',
-    badgeColor: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30'
+    borderGlow: 'border-yellow-500/50 shadow-[0_0_25px_-5px_rgba(234,179,8,0.3)]',
+    dotColor: 'bg-yellow-400 shadow-[0_0_10px_#facc15]',
+    badgeBg: 'bg-yellow-950/80 text-yellow-300 border-yellow-500/40',
+    accentText: 'text-yellow-300',
+    icon: Scroll
   },
   switching: {
-    glowColor: 'shadow-[0_0_25px_-5px_rgba(168,85,247,0.3)] border-purple-500/50',
-    dotColor: 'bg-purple-400',
-    badgeColor: 'bg-purple-500/10 text-purple-400 border-purple-500/30'
+    borderGlow: 'border-purple-500/50 shadow-[0_0_25px_-5px_rgba(168,85,247,0.3)]',
+    dotColor: 'bg-purple-400 shadow-[0_0_10px_#c084fc]',
+    badgeBg: 'bg-purple-950/80 text-purple-300 border-purple-500/40',
+    accentText: 'text-purple-300',
+    icon: Repeat
   }
 };
 
@@ -244,16 +252,16 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.05 }
+    transition: { staggerChildren: 0.12, delayChildren: 0.05 }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
   }
 };
 
@@ -264,36 +272,47 @@ export default function GameSystems({ lang = 'IND' }) {
   const t = systemsTranslations[lang] || systemsTranslations.IND;
   const currentPillar = t.pillars.find((item) => item.id === activeTab) || t.pillars[0];
   const activeStyle = pillarStyles[currentPillar.id] || pillarStyles.explore;
+  const IconComponent = activeStyle.icon;
 
   return (
-    <section id="systems" className="py-16 md:py-28 px-3 sm:px-6 lg:px-16 bg-[#040a06] relative">
-      {/* Dynamic Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] sm:w-[500px] md:w-[700px] h-[300px] bg-emerald-900/10 blur-[90px] md:blur-[140px] rounded-full pointer-events-none" />
+    <section id="systems" className="py-20 md:py-32 px-3 sm:px-6 lg:px-16 bg-[#020704] relative text-[#e0e8e2] font-serif overflow-hidden">
+      
+      {/* Top Black Dark Gradient Overlay (Efek Gelap Bagian Atas) */}
+      <div className="absolute top-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-b from-[#060D0A] via-[#020704]/90 to-transparent z-20 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10 space-y-10 md:space-y-14">
-        {/* Header Section - Diberi relative dan z-10 agar selalu berada di ATAS kartu saat di-hover */}
+      {/* Background Atmosphere & Ancient Pattern Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,#092617_0%,#020704_70%)] opacity-80 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#09231715_1px,transparent_1px),linear-gradient(to_bottom,#09231715_1px,transparent_1px)] bg-[size:36px_36px] opacity-30 pointer-events-none" />
+      
+      {/* Dynamic Gold/Emerald Ambient Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] md:w-[850px] h-[350px] bg-emerald-700/10 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-amber-600/5 blur-[150px] pointer-events-none rounded-full" />
+
+      <div className="max-w-7xl mx-auto relative z-30 space-y-12 md:space-y-16">
+        
+        {/* Header Section */}
         <motion.header 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center space-y-4 max-w-4xl mx-auto relative z-10 pt-4"
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-4 max-w-4xl mx-auto relative z-10 pt-4 md:pt-8"
         >
-          <div className="inline-flex items-center gap-1.5 text-[9px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-emerald-400 uppercase bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-800/40">
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c8a961]/40 bg-[#071910]/90 text-[#c8a961] text-[10px] sm:text-xs font-mono tracking-[0.22em] uppercase backdrop-blur-md shadow-[0_0_20px_rgba(200,169,97,0.15)]">
+            <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
             <span>{t.tagline}</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-black tracking-tight text-white uppercase leading-[1.15] sm:leading-[1.2] py-1">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#f7ebd0] via-[#d4af37] to-[#8a6f28] uppercase leading-[1.15] drop-shadow-md">
             {t.title}
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto font-light leading-relaxed px-2">
+          <p className="text-xs sm:text-sm md:text-base text-stone-300/90 max-w-2xl mx-auto font-sans font-light leading-relaxed px-3">
             {t.subtitle}
           </p>
         </motion.header>
 
-        {/* Pillars Tab Options - Diberi mt-6 agar ada jarak aman dari subtitle */}
+        {/* Pillars Tab Navigation (Prasasti Style) */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -304,129 +323,161 @@ export default function GameSystems({ lang = 'IND' }) {
           {t.pillars.map((pillar) => {
             const isActive = activeTab === pillar.id;
             const style = pillarStyles[pillar.id] || pillarStyles.explore;
+            const PillarIcon = style.icon;
 
             return (
               <motion.button
                 key={pillar.id}
                 variants={itemVariants}
                 onClick={() => setActiveTab(pillar.id)}
-                whileHover={{ scale: 1.01, y: -2 }}
+                whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className={`snap-center shrink-0 w-[220px] sm:w-auto text-left p-3.5 sm:p-5 rounded-xl border transition-all duration-300 relative flex flex-col justify-between backdrop-blur-md group hover:z-10 ${
+                className={`snap-center shrink-0 w-[230px] sm:w-auto text-left p-4 sm:p-5 rounded-md border transition-all duration-300 relative flex flex-col justify-between group overflow-hidden ${
                   isActive
-                    ? `bg-[#0d1410] ${style.glowColor}`
-                    : 'bg-[#0a0f0c]/60 border-emerald-900/20 hover:border-emerald-700/40 hover:bg-[#0d1410]/50'
+                    ? `bg-gradient-to-b from-[#0e2117] to-[#06120c] ${style.borderGlow} shadow-lg`
+                    : 'bg-[#040e09]/80 border-[#102b1c] hover:border-[#c8a961]/50 hover:bg-[#091a12]/60'
                 }`}
               >
+                {/* Ancient Corner Ornaments */}
+                <div className={`absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 ${isActive ? 'border-[#c8a961]' : 'border-emerald-900/30 group-hover:border-[#c8a961]/60'}`} />
+                <div className={`absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 ${isActive ? 'border-[#c8a961]' : 'border-emerald-900/30 group-hover:border-[#c8a961]/60'}`} />
+
                 <div>
-                  <div className="flex items-center justify-between mb-1.5 sm:mb-3">
-                    <span className="font-mono text-xs sm:text-sm tracking-widest text-white font-bold group-hover:text-emerald-400 transition-colors">
-                      {pillar.title}
-                    </span>
-                    <span className={`w-2 h-2 rounded-full ${style.dotColor} shadow-[0_0_8px] shrink-0`} />
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <PillarIcon className={`w-4 h-4 ${isActive ? style.accentText : 'text-stone-400 group-hover:text-amber-200'}`} />
+                      <span className={`font-serif text-sm sm:text-base tracking-wider font-bold uppercase transition-colors ${
+                        isActive ? 'text-[#f5ebd2]' : 'text-stone-300 group-hover:text-white'
+                      }`}>
+                        {pillar.title}
+                      </span>
+                    </div>
+                    <span className={`w-2 h-2 rounded-full ${style.dotColor} shrink-0`} />
                   </div>
-                  <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed line-clamp-2">
+
+                  <p className="text-[11px] sm:text-xs font-sans text-stone-400 leading-relaxed line-clamp-2">
                     {pillar.summary}
                   </p>
                 </div>
+
+                {/* Bottom Active Glow Bar */}
+                {isActive && (
+                  <motion.div 
+                    layoutId="activeTabUnderline"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#c8a961] to-transparent" 
+                  />
+                )}
               </motion.button>
             );
           })}
         </motion.div>
 
-        {/* Feature Display Card */}
+        {/* Feature Display Card / Prasasti Board */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-[#0b120e]/80 border border-emerald-900/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-10 backdrop-blur-xl shadow-2xl relative"
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-b from-[#071710] to-[#040e0a] border border-[#143322] rounded-md p-5 sm:p-7 md:p-10 backdrop-blur-xl shadow-2xl relative overflow-hidden"
         >
+          {/* Decorative Border Frame */}
+          <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#c8a961]" />
+          <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#c8a961]" />
+          <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#c8a961]" />
+          <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#c8a961]" />
+
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="mb-3 sm:mb-6">
-                <span className={`inline-block text-[9px] sm:text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 sm:py-1 rounded-md border ${activeStyle.badgeColor}`}>
-                  PILLAR: {currentPillar.title}
+              <div className="mb-4 sm:mb-6 flex items-center gap-2">
+                <span className={`inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-sm border ${activeStyle.badgeBg}`}>
+                  <IconComponent className="w-3.5 h-3.5" />
+                  PILLAR SYSTEM: {currentPillar.title}
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
-                {/* Detail Info Left */}
-                <div className="lg:col-span-6 space-y-3 sm:space-y-6 order-2 lg:order-1">
-                  <h3 className="text-lg sm:text-2xl md:text-3xl font-serif font-bold text-white leading-snug">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+                
+                {/* Left Side: System Details */}
+                <div className="lg:col-span-6 space-y-4 sm:space-y-6 order-2 lg:order-1">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#f7ebd0] leading-snug tracking-wide uppercase">
                     {currentPillar.headline}
                   </h3>
 
-                  <p className="text-xs sm:text-sm md:text-base text-gray-400 leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm font-sans text-stone-300 leading-relaxed font-light">
                     {currentPillar.description}
                   </p>
 
-                  <div className="space-y-2 pt-1 sm:pt-2">
-                    <span className="text-[10px] sm:text-xs font-mono tracking-widest text-amber-500 uppercase font-bold block mb-1.5 sm:mb-3">
-                      CORE SYSTEM FEATURES:
+                  <div className="space-y-2.5 pt-2 border-t border-[#122e20]">
+                    <span className="text-[10px] sm:text-xs font-mono tracking-widest text-[#c8a961] uppercase font-bold block mb-2">
+                      MISTIK & DOKTRIN FITUR UTAMA:
                     </span>
                     {currentPillar.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-gray-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mt-0.5" />
-                        <span className="leading-tight sm:leading-normal">{feature}</span>
+                      <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-200 font-sans">
+                        <CheckCircle2 className="w-4 h-4 text-[#c8a961] shrink-0 mt-0.5" />
+                        <span className="leading-snug">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Right Card Image Showcase */}
+                {/* Right Side: Showcase Media Frame */}
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <motion.div 
                     onClick={() => setIsModalOpen(true)}
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative h-48 sm:h-72 md:h-80 w-full rounded-xl overflow-hidden border border-emerald-900/40 cursor-pointer shadow-lg hover:border-emerald-500/60 transition-colors duration-300"
+                    className="group relative h-52 sm:h-72 md:h-80 w-full rounded-sm overflow-hidden border border-[#163826] cursor-pointer shadow-2xl hover:border-[#c8a961] transition-all duration-500"
                   >
                     <img 
                       src={currentPillar.image} 
                       alt={currentPillar.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover filter contrast-[105%] group-hover:scale-105 group-hover:brightness-110 transition-transform duration-700"
                     />
                     
-                    {/* Gradient Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#070b09] via-[#070b09]/30 to-transparent opacity-85 group-hover:opacity-70 transition-opacity" />
+                    {/* Dark Vignette Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#040e0a] via-[#040e0a]/40 to-transparent opacity-90 group-hover:opacity-75 transition-opacity" />
 
-                    {/* Card Bottom Meta */}
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none gap-2">
+                    {/* Card Inner Corner Frame */}
+                    <div className="absolute inset-2 border border-white/10 group-hover:border-[#c8a961]/40 pointer-events-none transition-colors" />
+
+                    {/* Card Bottom Meta Info */}
+                    <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between pointer-events-none gap-2">
                       <div className="min-w-0 flex-1">
-                        <span className="text-[8px] sm:text-[10px] font-mono tracking-widest text-emerald-400 uppercase block truncate">
+                        <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-[#c8a961] uppercase block truncate">
                           {currentPillar.mechanicTag}
                         </span>
-                        <h4 className="text-xs sm:text-sm font-mono text-white font-bold truncate">
-                          {currentPillar.mechanicTitle.split('(')[0]}
+                        <h4 className="text-xs sm:text-sm font-serif text-[#f7ebd0] font-bold truncate uppercase tracking-wider">
+                          {currentPillar.mechanicTitle}
                         </h4>
                       </div>
-                      <span className="flex items-center gap-1 text-[9px] sm:text-[11px] font-mono text-amber-400 bg-black/70 backdrop-blur-sm px-2 py-1 rounded border border-amber-500/30 shrink-0">
-                        <Eye className="w-3 h-3" /> DETAIL
+                      
+                      <span className="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono text-[#c8a961] bg-[#020704]/90 backdrop-blur-md px-3 py-1.5 rounded-sm border border-[#c8a961]/50 shrink-0 shadow-lg group-hover:bg-[#c8a961] group-hover:text-black transition-all">
+                        <Eye className="w-3.5 h-3.5" /> DETAIL
                       </span>
                     </div>
                   </motion.div>
                 </div>
+
               </div>
             </motion.div>
           </AnimatePresence>
         </motion.div>
       </div>
 
-      {/* Gameplay Detail Modal */}
+      {/* Modal Detail Overlay (Scroll Lontar Style) */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6 bg-black/80 backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6 bg-black/85 backdrop-blur-md"
           >
             <div className="absolute inset-0" onClick={() => setIsModalOpen(false)} />
             
@@ -434,48 +485,56 @@ export default function GameSystems({ lang = 'IND' }) {
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: "100%", opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 280 }}
-              className="bg-[#0b120e] border-t sm:border border-emerald-800/50 rounded-t-2xl sm:rounded-2xl max-w-2xl w-full p-4 sm:p-6 md:p-8 relative shadow-2xl space-y-3 sm:space-y-6 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar z-10"
+              transition={{ type: "spring", damping: 26, stiffness: 280 }}
+              className="bg-[#05120c] border-t sm:border border-[#c8a961]/60 rounded-t-lg sm:rounded-md max-w-2xl w-full p-5 sm:p-7 md:p-8 relative shadow-[0_0_50px_rgba(200,169,97,0.2)] space-y-4 sm:space-y-6 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto scrollbar-none z-10 font-serif"
             >
+              {/* Corner Ornaments in Modal */}
+              <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#c8a961]" />
+              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#c8a961]" />
+
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-white bg-emerald-950/80 p-1.5 sm:p-2 rounded-full border border-emerald-800/40 transition-colors z-10"
+                className="absolute top-4 right-4 text-stone-400 hover:text-white bg-[#020704]/90 p-2 rounded-full border border-[#c8a961]/40 hover:border-[#c8a961] transition-colors z-10"
                 aria-label="Close modal"
               >
-                <X className="w-4 h-4 sm:w-5 sm:h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-[#c8a961]" />
               </button>
 
-              <div className="space-y-1 sm:space-y-2 pr-8">
-                <span className={`inline-block text-[9px] sm:text-xs font-mono font-bold tracking-widest px-2 py-0.5 rounded border ${activeStyle.badgeColor}`}>
-                  GAMEPLAY DEEP DIVE: {currentPillar.title}
+              <div className="space-y-2 pr-8">
+                <span className={`inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-sm border ${activeStyle.badgeBg}`}>
+                  <IconComponent className="w-3.5 h-3.5" />
+                  ANALISIS PUSAKA: {currentPillar.title}
                 </span>
-                <h3 className="text-lg sm:text-2xl font-serif font-bold text-white leading-tight">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#f7ebd0] leading-tight uppercase tracking-wide">
                   {currentPillar.mechanicTitle}
                 </h3>
               </div>
 
-              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+              <p className="text-xs sm:text-sm font-sans text-stone-300 leading-relaxed font-light border-l-2 border-[#c8a961] pl-3 py-1 bg-[#081a12]">
                 {currentPillar.deepDetail.overview}
               </p>
 
-              <div className="space-y-2 bg-[#050907] p-3 sm:p-4 rounded-xl border border-emerald-900/40">
-                <span className="text-[10px] sm:text-xs font-mono text-amber-500 font-bold tracking-wider uppercase block">
-                  ADVANCED MECHANICS BREAKDOWN:
+              <div className="space-y-3 bg-[#030906] p-4 rounded-sm border border-[#133020]">
+                <span className="text-[10px] sm:text-xs font-mono text-[#c8a961] font-bold tracking-wider uppercase block">
+                  MEKANISME TINGKAT LANJUT (KANURAGAN):
                 </span>
-                {currentPillar.deepDetail.mechanics.map((item, idx) => (
-                  <div key={idx} className="text-xs sm:text-sm text-gray-300 flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold shrink-0">•</span>
-                    <span className="leading-relaxed">{item}</span>
-                  </div>
-                ))}
+                <div className="space-y-2">
+                  {currentPillar.deepDetail.mechanics.map((item, idx) => (
+                    <div key={idx} className="text-xs sm:text-sm font-sans text-stone-300 flex items-start gap-2.5">
+                      <span className="text-[#c8a961] font-bold shrink-0">✦</span>
+                      <span className="leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="pt-2 flex justify-end">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold px-5 py-2.5 rounded-lg transition-colors text-center active:scale-95"
+                  className="w-full sm:w-auto bg-[#0f2d1e] hover:bg-[#c8a961] hover:text-black border border-[#c8a961] text-[#c8a961] font-mono text-xs font-bold px-6 py-2.5 rounded-sm transition-all text-center shadow-lg active:scale-95 uppercase tracking-widest flex items-center justify-center gap-2"
                 >
-                  {t.closeText}
+                  <span>{t.closeText}</span>
+                  <ArrowUpRight className="w-4 h-4" />
                 </button>
               </div>
             </motion.div>
