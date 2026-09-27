@@ -223,7 +223,7 @@ export default function Guardians({ lang = 'IND' }) {
           className="pt-2 flex justify-between items-start sm:items-center gap-2"
         >
           <div>
-            <h1 className="text-xl sm:text-4xl lg:text-5xl font-black tracking-widest uppercase font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-600 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <h1 className="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-black tracking-[0.15em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-300 to-amber-600 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] filter drop-shadow-[0_0_15px_rgba(245,158,11,0.2)]">
               {content.sectionTitle}
             </h1>
           </div>
