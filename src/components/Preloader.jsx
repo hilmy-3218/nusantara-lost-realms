@@ -172,7 +172,7 @@ export default function Preloader({
             className="absolute z-50 top-6 left-1/2 -translate-x-1/2 bg-[#050c08]/95 border border-[#d4af37]/60 px-6 py-3 rounded-full shadow-[0_0_25px_rgba(212,175,55,0.3)] backdrop-blur-md flex items-center gap-4 text-xs font-sans"
           >
             <span className="text-[#e2ded0] font-medium tracking-wide">
-              Aktifkan Suara Cinematic?
+              Enable Cinematic Sound?
             </span>
             <button
               onClick={handleEnableSound}
