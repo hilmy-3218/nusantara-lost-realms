@@ -179,7 +179,7 @@ export default function Preloader({
               className="flex items-center gap-1.5 px-4 py-1.5 bg-[#d4af37] hover:bg-white text-[#030705] font-bold rounded-full transition-all cursor-pointer shadow-[0_0_15px_rgba(212,175,55,0.5)]"
             >
               <Volume2 className="w-3.5 h-3.5" />
-              <span>YA</span>
+              <span>YES</span>
             </button>
           </motion.div>
         )}
