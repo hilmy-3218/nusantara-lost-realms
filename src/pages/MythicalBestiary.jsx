@@ -759,13 +759,18 @@ export default function MythicalBestiary({ lang = 'IND', t }) {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 relative z-10"
         >
-          <div className="inline-block border border-[#c8aa6e]/30 bg-[#0b1712]/80 px-4 py-1 rounded-full text-[10px] sm:text-xs tracking-[0.25em] text-[#c8aa6e] uppercase mb-6 shadow-inner">
+          {/* Badge dengan pelacak huruf lebih renggang */}
+          <div className="inline-block border border-[#c8aa6e]/30 bg-[#0b1712]/80 px-4 py-1 rounded-full text-[10px] sm:text-xs tracking-[0.3em] text-[#c8aa6e] uppercase mb-6 shadow-inner font-sans font-semibold">
             {t?.badge || (lang === 'IND' ? 'KATALOG MAKHLUK MITOS' : 'MYTHICAL BESTIARY')}
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif tracking-wider text-amber-100 uppercase mb-4 leading-tight">
+
+          {/* Judul menggunakan Font Mitos + Drop Shadow Emas Tipis */}
+          <h1 className="font-mythic text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-widest text-amber-100 uppercase mb-4 leading-tight drop-shadow-[0_2px_10px_rgba(200,170,110,0.2)]">
             {t?.title || (lang === 'IND' ? 'MAKHLUK ALAM TERLUPAKAN' : 'CREATURES OF THE LOST REALM')}
           </h1>
-          <p className="italic text-amber-200/60 text-sm sm:text-base font-serif tracking-wide">
+
+          {/* Subtitle font serif/sans dengan kejelasan tinggi */}
+          <p className="italic text-amber-200/70 text-sm sm:text-base font-serif tracking-wide max-w-xl mx-auto leading-relaxed">
             {t?.subtitle || (lang === 'IND' ? '"Lahir dari eter purba dan isolasi berabad-abad, tidak jinak maupun fana."' : '"Born from primeval ether and centuries of isolation, neither tame nor mortal."')}
           </p>
         </motion.header>
