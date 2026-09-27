@@ -202,7 +202,7 @@ export default function Guardians({ lang = 'IND' }) {
           />
           
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-transparent to-stone-950/90 hidden lg:block" />
-          <div className="absolute top-0 left-0 right-0 h-2/5 sm:h-1/3 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-1/3 sm:h-1/4 bg-gradient-to-b from-black via-black/70 to-transparent pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 h-3/5 sm:h-1/2 lg:h-1/3 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-black/60 pointer-events-none" />
         </motion.div>
