@@ -424,7 +424,7 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
         animate={{ opacity: 1, scale: 1, y: isMobile ? 0 : -30 }} 
         exit={{ opacity: 0, scale: 0.95, y: isMobile ? 30 : -45 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className={`${isMobile ? "mt-0 rounded-t-3xl" : "-mt-6 sm:-mt-10 rounded-2xl"} bg-gradient-to-b from-[#06241b] via-[#03140f] to-[#010a07] backdrop-blur-2xl border border-amber-500/40 p-4 sm:p-6 flex flex-col justify-between space-y-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.95)] relative overflow-hidden group` }
+        className={`${isMobile ? "mt-0 rounded-t-3xl" : "-mt-6 sm:-mt-10 rounded-2xl"} bg-gradient-to-b from-[#06241b]/60 via-[#03140f]/50 to-[#010a07]/65 backdrop-blur-md border border-amber-500/30 p-4 sm:p-6 flex flex-col justify-between space-y-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] relative overflow-hidden group`}
       >
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -445,7 +445,7 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
             {isMobile && (
               <button
                 onClick={onClose}
-                className="w-7 h-7 rounded-full bg-stone-900/80 border border-amber-500/40 text-amber-300 text-xs flex items-center justify-center hover:bg-amber-500 hover:text-stone-950 transition-all shadow-md"
+                className="w-7 h-7 rounded-full bg-stone-900/50 border border-amber-500/40 text-amber-300 text-xs flex items-center justify-center hover:bg-amber-500 hover:text-stone-950 transition-all shadow-md"
               >
                 ✕
               </button>
@@ -470,9 +470,8 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
           {/* Weapon & Ultimate */}
           <div className="grid grid-cols-2 gap-2.5">
 
-            {/* Weapon (perlu dirapikan)*/}
-            <div className="relative group/card overflow-hidden p-3 rounded-lg bg-gradient-to-br from-[#0b2117]/90 via-[#07110c]/95 to-[#020604] border border-[#cba342]/25
-              hover:border-[#cba342]/70 transition-all duration-500 shadow-[inset_0_0_20px_rgba(203,163,66,0.03),0_8px_25px_rgba(0,0,0,0.5)]">
+            {/* Weapon */}
+            <div className="relative group/card overflow-hidden p-3 rounded-lg bg-gradient-to-br from-[#0b2117]/50 via-[#07110c]/60 to-[#020604]/65 border border-[#cba342]/20 hover:border-[#cba342]/60 transition-all duration-500 shadow-[inset_0_0_20px_rgba(203,163,66,0.03),0_8px_25px_rgba(0,0,0,0.3)]">
 
               {/* Ancient corner */}
               <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-[#cba342]/15 to-transparent rounded-bl-full pointer-events-none" />
@@ -489,16 +488,11 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
               </p>
 
               {/* Bottom glow */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2
-                w-0 h-px bg-[#cba342]
-                group-hover/card:w-3/4
-                transition-all duration-500
-                shadow-[0_0_8px_#cba342]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-[#cba342] group-hover/card:w-3/4 transition-all duration-500 shadow-[0_0_8px_#cba342]" />
             </div>
 
             {/* Ultimate */}
-            <div className="relative group/card overflow-hidden p-3 rounded-lg bg-gradient-to-br from-[#24100d]/90 via-[#100806]/95 to-[#020604] border border-[#8f3b2d]/30 hover:border-[#b84b38]/70
-              transition-all duration-500 shadow-[inset_0_0_20px_rgba(143,59,45,0.04),0_8px_25px_rgba(0,0,0,0.5)]">
+            <div className="relative group/card overflow-hidden p-3 rounded-lg bg-gradient-to-br from-[#24100d]/50 via-[#100806]/60 to-[#020604]/65 border border-[#8f3b2d]/25 hover:border-[#b84b38]/60 transition-all duration-500 shadow-[inset_0_0_20px_rgba(143,59,45,0.04),0_8px_25px_rgba(0,0,0,0.3)]">
 
               {/* Ancient corner */}
               <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-bl from-[#a33d2d]/15 to-transparent rounded-bl-full pointer-events-none" />
@@ -510,33 +504,27 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
                 {content.ultimateLabel}
               </span>
 
-              <p className="text-[10px] sm:text-xs font-semibold text-[#e5c7bd] tracking-wide break-words
-                group-hover/card:text-[#d87862] transition-colors duration-300">
+              <p className="text-[10px] sm:text-xs font-semibold text-[#e5c7bd] tracking-wide break-words group-hover/card:text-[#d87862] transition-colors duration-300">
                 {selectedGuardian.ultimate}
               </p>
 
               {/* Bottom glow */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-[#a33d2d] group-hover/card:w-3/4
-                transition-all duration-500 shadow-[0_0_8px_#a33d2d]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-[#a33d2d] group-hover/card:w-3/4 transition-all duration-500 shadow-[0_0_8px_#a33d2d]" />
             </div>
 
           </div>
 
-
           {/* Guardian Quote */}
-          <blockquote className="relative text-xs italic text-[#d8d4bd] border-l-2 border-[#cba342]/70 pl-3 py-2
-            bg-gradient-to-r from-[#cba342]/[0.06] to-transparent rounded-r-lg font-serif leading-relaxed overflow-hidden">
+          <blockquote className="relative text-xs italic text-[#d8d4bd] border-l-2 border-[#cba342]/70 pl-3 py-2 bg-gradient-to-r from-[#cba342]/[0.05] to-transparent rounded-r-lg font-serif leading-relaxed overflow-hidden">
 
             {/* Decorative glow */}
-            <div className="absolute left-0 top-0 w-12 h-full
-              bg-[#cba342]/5 blur-xl pointer-events-none" />
+            <div className="absolute left-0 top-0 w-12 h-full bg-[#cba342]/5 blur-xl pointer-events-none" />
 
             <span className="relative z-10">
               "{selectedGuardian.quote}"
             </span>
 
           </blockquote>
-
 
           {/* Description */}
           <p className="text-xs text-[#a9b5aa] leading-relaxed font-sans font-normal tracking-[0.01em]">
@@ -561,7 +549,7 @@ function GuardianInfoCard({ selectedGuardian, content, isMobile = false, onClose
                   <span className="uppercase text-amber-200/70 tracking-wider font-medium">{content.stats[key]}</span>
                   <span className="text-amber-400 font-semibold">{val}</span>
                 </div>
-                <div className="w-full h-1.5 bg-stone-950/90 rounded-full overflow-hidden border border-amber-500/20 p-[1px] shadow-inner">
+                <div className="w-full h-1.5 bg-stone-950/50 rounded-full overflow-hidden border border-amber-500/20 p-[1px] shadow-inner">
                   <motion.div
                     className="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-yellow-200 rounded-full shadow-[0_0_8px_rgba(251,191,36,0.6)]"
                     initial={{ width: 0 }}
