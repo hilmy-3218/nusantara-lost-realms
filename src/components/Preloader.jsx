@@ -258,6 +258,31 @@ export default function Preloader({
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/80" />
         </motion.div>
 
+        {/* EFEK GARIS PENDEK -> MEMANJANG -> EFEK BRUSH CAHAYA -> LANGSUNG HILANG */}
+        <AnimatePresence>
+          {phase === 2 && (
+            <motion.div
+              key="brush-line-effect"
+              className="absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] flex items-center justify-center pointer-events-none"
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={{ scaleY: 1, opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.1 } }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              {/* Inti Garis Putih Terang */}
+              <div className="w-full h-full bg-white shadow-[0_0_15px_#ffffff,0_0_30px_#fff5d6]" />
+
+              {/* Efek Brush / Flash Cahaya Emas Menyebar Saat Sudah Memanjang Full */}
+              <motion.div
+                className="absolute inset-y-0 w-12 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent blur-md"
+                initial={{ opacity: 0, scaleX: 0.2 }}
+                animate={{ opacity: [0, 1, 0], scaleX: [0.2, 2.5, 0] }}
+                transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* PINTU KANAN */}
         <motion.div
           className="relative w-1/2 h-full border-l border-[#d4af37]/40 shadow-[-15px_0_50px_rgba(0,0,0,0.95)] overflow-hidden"
