@@ -281,19 +281,33 @@ export default function Maps({ lang = 'IND' }) {
       variants={sectionVariants}
     >
       <div className="max-w-7xl mx-auto">
-        
-        {/* Header Judul Peta */}
+      
+        {/* Header Judul Peta */}        
         <motion.div className="mb-8 text-center" variants={itemVariants}>
-          <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#d4af37]/70 mb-1">
+
+          {/* LABEL */}
+          <p className="font-['Cinzel'] text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#d4af37]/70 mb-2">
             {lang === 'IND' ? 'EKSPLORASI WILAYAH' : 'WORLD EXPLORATION'}
           </p>
-          <h2 className="text-2xl md:text-4xl font-extrabold tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-r from-[#b89328] via-[#d4af37] to-[#b89328] uppercase drop-shadow-[0_2px_10px_rgba(212,175,55,0.2)]">
-            {lang === 'IND' ? 'PETA ALAM INTERAKTIF' : 'INTERACTIVE REALM MAP'}
+
+          {/* TITLE */}
+          <h2
+            className="font-['Cinzel_Decorative'] text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.08em] text-transparent bg-clip-text
+              bg-gradient-to-b from-[#fff8dc] via-[#d4af37] to-[#8f6817] uppercase drop-shadow-[0_3px_12px_rgba(212,175,55,0.35)] leading-tight"
+          >
+            {lang === 'IND' ? 'WILAYAH YANG TERLUPAKAN' : 'THE FORGOTTEN REALMS'}
           </h2>
-          <div className="flex items-center justify-center gap-2 mt-3">
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent to-[#d4af37]/60" />
-            <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37]" />
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-l from-transparent to-[#d4af37]/60" />
+
+          {/* DECORATION */}
+          <div className="flex items-center justify-center gap-3 mt-4">
+
+            <div className="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent via-[#d4af37]/60 to-[#d4af37]"/>
+
+            <div className="relative w-2 h-2 rotate-45 bg-[#d4af37] shadow-[0_0_10px_rgba(212,175,55,0.7)]">
+              <div className="absolute inset-[2px] bg-[#fff3b0]" />
+            </div>
+
+            <div className="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent via-[#d4af37]/60 to-[#d4af37]"/>
           </div>
         </motion.div>
 
