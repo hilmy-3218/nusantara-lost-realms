@@ -56,9 +56,10 @@ export default function Preloader({
           startAutomaticSequence();
           return 100;
         }
-        return Math.min(prev + Math.floor(Math.random() * 5) + 1, 100);
+        // Rata-rata penambahan ~1.5% per tick
+        return Math.min(prev + Math.floor(Math.random() * 2) + 1, 100);
       });
-    }, 35);
+    }, 45); // 45ms x ~67 ticks = ±3.0 detik
 
     return () => clearInterval(interval);
   }, [phase]);
@@ -158,7 +159,7 @@ export default function Preloader({
         }
         .animate-scanline { animation: scanline 6s linear infinite; }
         .animate-ray-rotate { animation: rayRotate 40s linear infinite; }
-        .animate-mist { animation: mistMove 25s ease-in-out infinite; }
+        .animate-[#030705] { animation: mistMove 25s ease-in-out infinite; }
       `}</style>
 
       {/* POPUP SUARA */}
@@ -258,28 +259,17 @@ export default function Preloader({
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/80" />
         </motion.div>
 
-        {/* EFEK GARIS PENDEK -> MEMANJANG -> EFEK BRUSH CAHAYA -> LANGSUNG HILANG */}
+        {/* GARIS VERTIKAL POLOS (PUTIH BERSHI, TANPA EFEK GLOW/KUNING) */}
         <AnimatePresence>
           {phase === 2 && (
             <motion.div
-              key="brush-line-effect"
-              className="absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] flex items-center justify-center pointer-events-none"
+              key="clean-white-line"
+              className="absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-white pointer-events-none"
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 1, opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.1 } }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-            >
-              {/* Inti Garis Putih Terang */}
-              <div className="w-full h-full bg-white shadow-[0_0_15px_#ffffff,0_0_30px_#fff5d6]" />
-
-              {/* Efek Brush / Flash Cahaya Emas Menyebar Saat Sudah Memanjang Full */}
-              <motion.div
-                className="absolute inset-y-0 w-12 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent blur-md"
-                initial={{ opacity: 0, scaleX: 0.2 }}
-                animate={{ opacity: [0, 1, 0], scaleX: [0.2, 2.5, 0] }}
-                transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-              />
-            </motion.div>
+            />
           )}
         </AnimatePresence>
 
@@ -426,7 +416,7 @@ export default function Preloader({
               </motion.div>
             )}
 
-            {/* PHASE 2: THE GATE REMEMBERS (TREMOR + ENERGI SURGE) */}
+            {/* PHASE 2: THE GATE REMEMBERS */}
             {phase === 2 && (
               <motion.div
                 key="phase2"
@@ -441,7 +431,6 @@ export default function Preloader({
                 transition={{ duration: 1.2 }}
                 className="relative space-y-4"
               >
-                {/* Denyut Cahaya Belakang Teks */}
                 <motion.div
                   initial={{ scale: 0, opacity: 0.8 }}
                   animate={{ scale: [1, 3], opacity: [0.8, 0] }}
