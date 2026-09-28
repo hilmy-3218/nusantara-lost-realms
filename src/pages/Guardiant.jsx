@@ -20,7 +20,7 @@ import iconGuardiant4 from '../assets/guardiant/icon-guardian4.jpg';
 
 const guardiansData = {
   IND: {
-    sectionTitle: "PENJAGA",
+    sectionTitle: "PARA PENJAGA",
     attributesLabel: "KESAKTIAN & ATRIBUT",
     roleLabel: "PERAN",
     weaponLabel: "PUSAKA UTAMA",
@@ -92,7 +92,7 @@ const guardiansData = {
     ]
   },
   ENG: {
-    sectionTitle: "GUARDIANS",
+    sectionTitle: "THE GUARDIANS",
     attributesLabel: "STATS & ATTRIBUTES",
     roleLabel: "ROLE",
     weaponLabel: "PRIMARY WEAPON",
