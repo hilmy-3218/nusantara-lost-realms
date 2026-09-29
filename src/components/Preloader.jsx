@@ -18,9 +18,21 @@ export default function Preloader({
   const [progress, setProgress] = useState(0);
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [showSoundPopup, setShowSoundPopup] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const timersRef = useRef([]);
   const gateAudioRef = useRef(null);
+
+  // Deteksi ukuran layar untuk mengaktifkan/menonaktifkan efek getar
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 640); // 640px = breakpoint 'sm' Tailwind
+    };
+
+    handleResize(); // Cek saat pertama kali render
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const clearAllTimers = () => {
     timersRef.current.forEach((t) => clearTimeout(t));
@@ -56,10 +68,9 @@ export default function Preloader({
           startAutomaticSequence();
           return 100;
         }
-        // Rata-rata penambahan ~1.5% per tick
         return Math.min(prev + Math.floor(Math.random() * 2) + 1, 100);
       });
-    }, 45); // 45ms x ~67 ticks = ±3.0 detik
+    }, 45);
 
     return () => clearInterval(interval);
   }, [phase]);
@@ -118,9 +129,9 @@ export default function Preloader({
   return (
     <motion.div 
       className="fixed inset-0 z-50 bg-[#030705] overflow-hidden flex flex-col justify-between items-center select-none font-serif text-[#c2c9c4]"
-      /* Efek Layar Bergetar (Screen Shake) pada Phase 2 */
+      /* Efek Layar Bergetar HANYA aktif jika Phase 2 DAN di Desktop (isDesktop) */
       animate={
-        phase === 2
+        phase === 2 && isDesktop
           ? {
               x: [0, -4, 4, -3, 3, -1, 1, 0],
               y: [0, 3, -3, 2, -2, 1, -1, 0],
@@ -129,7 +140,7 @@ export default function Preloader({
       }
       transition={{
         duration: 0.2,
-        repeat: phase === 2 ? Infinity : 0,
+        repeat: phase === 2 && isDesktop ? Infinity : 0,
         repeatType: 'mirror',
       }}
     >
@@ -259,12 +270,12 @@ export default function Preloader({
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/80" />
         </motion.div>
 
-        {/* GARIS VERTIKAL POLOS (PUTIH BERSHI, TANPA EFEK GLOW/KUNING) */}
+        {/* GARIS VERTIKAL POLOS (DIHILANGKAN DI MOBILE) */}
         <AnimatePresence>
           {phase === 2 && (
             <motion.div
               key="clean-white-line"
-              className="absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-white pointer-events-none"
+              className="hidden sm:block absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-white pointer-events-none"
               initial={{ scaleY: 0, opacity: 0 }}
               animate={{ scaleY: 1, opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.1 } }}
@@ -290,11 +301,11 @@ export default function Preloader({
           <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-transparent to-black/80" />
         </motion.div>
 
-        {/* KILATAN CAHAYA PUTIH / EMAS TEPAT SAAT GERBANG TERBUKA (PHASE 3) */}
+        {/* KILATAN CAHAYA PUTIH / EMAS (DIHILANGKAN DI MOBILE) */}
         <AnimatePresence>
           {isGateOpened && (
             <motion.div
-              className="absolute z-30 inset-0 bg-gradient-to-r from-white/20 via-[#fff5d6] to-white/20 pointer-events-none"
+              className="hidden sm:block absolute z-30 inset-0 bg-gradient-to-r from-white/20 via-[#fff5d6] to-white/20 pointer-events-none"
               initial={{ opacity: 1 }}
               animate={{ opacity: 0 }}
               transition={{ duration: 1.8, ease: "easeOut" }}
@@ -423,9 +434,9 @@ export default function Preloader({
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ 
                   opacity: 1, 
-                  scale: [0.95, 1.05, 1],
-                  x: [0, -3, 3, -2, 2, 0],
-                  y: [0, -2, 1, -1, 0] 
+                  scale: isDesktop ? [0.95, 1.05, 1] : 1,
+                  x: isDesktop ? [0, -3, 3, -2, 2, 0] : 0,
+                  y: isDesktop ? [0, -2, 1, -1, 0] : 0
                 }}
                 exit={{ opacity: 0, scale: 1.2, filter: 'blur(10px)' }}
                 transition={{ duration: 1.2 }}
@@ -500,12 +511,12 @@ export default function Preloader({
                       >
                         <button
                           onClick={handleEnterRealm}
-                          className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#d4af37] text-[#030705] font-bold text-xs tracking-[0.25em] uppercase hover:bg-white hover:shadow-[0_0_40px_rgba(212,175,55,0.9)] transition-all cursor-pointer font-sans overflow-hidden"
+                          className="group relative inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-8 sm:py-4 bg-[#d4af37] text-[#030705] font-bold text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase hover:bg-white hover:shadow-[0_0_40px_rgba(212,175,55,0.9)] transition-all cursor-pointer font-sans overflow-hidden"
                         >
                           <div className="absolute inset-0 w-1/2 h-full bg-white/30 -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out" />
-                          <Sparkles className="w-4 h-4 text-[#030705] animate-pulse" />
+                          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#030705] animate-pulse" />
                           <span>ENTER THE REALM</span>
-                          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                       </motion.div>
                     )}
