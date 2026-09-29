@@ -530,7 +530,7 @@ export default function Preloader({
 
         <div className="text-center space-y-2">
           <p className="text-[10px] sm:text-xs tracking-[0.3em] text-[#4e6355] uppercase font-sans">
-            A High-Fidelity Archipelago Showcase
+            A Journey Through the Lost Realms
           </p>
           <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#2a4235] to-transparent mx-auto" />
         </div>
