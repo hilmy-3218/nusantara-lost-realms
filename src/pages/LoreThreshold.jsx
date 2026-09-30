@@ -87,7 +87,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
       const section = stageContainerRef.current;
       if (!section) return;
 
-      // 1. Matikan & Bersihkan seluruh ScrollTrigger aktif 
+      // 1. Matikan ScrollTrigger aktif sebelumnya
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
       const panels = gsap.utils.toArray('.chapter-card', section);
@@ -95,18 +95,18 @@ export default function LoreThreshold({ lang = 'IND' }) {
 
       if (panels.length < 2) return;
 
-      // 2. Reset paksa style elemen ke keadaan default awal
+      // 2. Reset paksa style awal
       gsap.set(panels, { autoAlpha: 0, clearProps: 'transform' });
       gsap.set(bgImages, { autoAlpha: 0, scale: 1.15 });
 
-      // Set slide pertama agar tampil aktif
+      // Slide Pertama Aktif
       gsap.set(panels[0], { autoAlpha: 1 });
       gsap.set(bgImages[0], { autoAlpha: 0.55, scale: 1.0 });
 
       const firstChildren = panels[0].querySelectorAll('.animate-child');
       gsap.set(firstChildren, { autoAlpha: 1, x: 0, y: 0, scale: 1 });
 
-      // 3. Buat timeline GSAP ScrollTrigger baru
+      // 3. Timeline GSAP
       const loreTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
@@ -124,7 +124,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
         }
       });
 
-      // 4. Tambahkan animasi per-slide
+      // 4. Animasi Transisi Per-Slide
       panels.slice(1).forEach((panel, index) => {
         const currentBg = bgImages[index];
         const nextBg = bgImages[index + 1];
@@ -135,7 +135,8 @@ export default function LoreThreshold({ lang = 'IND' }) {
         const isRight = chapters[index + 1]?.align === 'right';
         const enterX = isRight ? 100 : -100;
 
-        loreTimeline.to(currentBg, { autoAlpha: 0, scale: 0.95, duration: 0.5 }, index)
+        loreTimeline
+          .to(currentBg, { autoAlpha: 0, scale: 0.95, duration: 0.5 }, index)
           .to(
             prevChildren,
             {
@@ -177,10 +178,9 @@ export default function LoreThreshold({ lang = 'IND' }) {
           );
       });
 
-      // 5. Hitung ulang kalkulasi scroll
       ScrollTrigger.refresh();
     },
-    { scope: stageContainerRef, dependencies: [lang] } // Memicu ulang hook saat `lang` berubah
+    { scope: stageContainerRef, dependencies: [lang] }
   );
 
   const currentData = chapters[activeLoreIndex] || chapters[0];
@@ -191,7 +191,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
       ref={stageContainerRef}
       className="relative h-screen w-full bg-[#020704] text-[#c2c9c4] flex flex-col justify-between items-center p-6 md:p-12 overflow-hidden select-none font-['Plus_Jakarta_Sans']"
     >
-      {/* Top Progress Bar Accent */}
+      {/* Top Progress Bar */}
       <div className="absolute top-0 inset-x-0 h-[3px] bg-white/5 z-30 pointer-events-none">
         <div
           ref={progressBarRef}
@@ -200,31 +200,42 @@ export default function LoreThreshold({ lang = 'IND' }) {
         />
       </div>
 
-      {/* 1. Background Image Dinamis */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* 1. Dynamic Background Image */}
+      <div className="absolute inset-0 pointer-events-none z-0">
         {chapters.map((ch) => (
           <div
-            key={`${lang}-${ch.id}`} // Key unik menyertakan `lang` agar DOM re-render sempurna
+            key={`${lang}-${ch.id}`}
             className="lore-bg-item absolute inset-0 bg-cover bg-center bg-no-repeat filter contrast-125 brightness-90"
             style={{ backgroundImage: `url(${ch.bgImage})` }}
           />
         ))}
       </div>
 
-      {/* 2. Gradient Overlay Layer */}
-      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#020604]/80 via-[#020604]/30 to-transparent pointer-events-none z-[1]" />
+      {/* 2. Layer Overlay Gradien Hitam (PERBAIKAN BUG) */}
+      {/* Top Vignette - Terpisah & Tetap */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#020604] via-[#020604]/40 to-transparent pointer-events-none z-[1]" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#020604] via-[#020604]/60 to-transparent pointer-events-none z-[1]" />
+
+      {/* Gradient Layer: Alignment Right (Tepi Gelap di Kanan) */}
       <div
-        className={`absolute inset-0 pointer-events-none bg-gradient-to-b via-transparent to-[#020604]/95 transition-all duration-700 ${
-          isRight
-            ? 'from-[#020604]/50 md:bg-gradient-to-r md:from-transparent md:via-[#020604]/70 md:to-[#020604]/95'
-            : 'from-[#020604]/50 md:bg-gradient-to-l md:from-transparent md:via-[#020604]/70 md:to-[#020604]/95'
+        className={`absolute inset-0 pointer-events-none bg-gradient-to-b from-[#020604]/60 via-transparent to-[#020604]/95 md:bg-gradient-to-r md:from-transparent md:via-[#020604]/80 md:to-[#020604]/98 transition-opacity duration-700 ease-in-out z-[1] ${
+          isRight ? 'opacity-100' : 'opacity-0'
         }`}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_35%,_rgba(2,6,4,0.85)_90%)] pointer-events-none" />
+
+      {/* Gradient Layer: Alignment Left (Tepi Gelap di Kiri) */}
+      <div
+        className={`absolute inset-0 pointer-events-none bg-gradient-to-b from-[#020604]/60 via-transparent to-[#020604]/95 md:bg-gradient-to-l md:from-transparent md:via-[#020604]/80 md:to-[#020604]/98 transition-opacity duration-700 ease-in-out z-[1] ${
+          !isRight ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+
+      {/* Radial Vignette Center */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(2,6,4,0.85)_90%)] pointer-events-none z-[1]" />
 
       {/* 3. Runic Ornament */}
       <div
-        className={`absolute inset-0 hidden lg:flex items-center pointer-events-none opacity-20 z-0 transition-all duration-700 ${
+        className={`absolute inset-0 hidden lg:flex items-center pointer-events-none opacity-20 z-[2] transition-all duration-700 ${
           isRight ? 'justify-start ml-12' : 'justify-end mr-12'
         }`}
       >
@@ -237,7 +248,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
 
       {/* 4. Ambient Glow */}
       <div
-        className={`absolute top-1/2 -translate-y-1/2 pointer-events-none z-0 transition-all duration-700 ${
+        className={`absolute top-1/2 -translate-y-1/2 pointer-events-none z-[2] transition-all duration-700 ${
           isRight ? 'left-10 md:left-20' : 'right-10 md:right-20'
         }`}
       >
@@ -252,7 +263,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
           const isPanelRight = ch.align === 'right';
           return (
             <article
-              key={`${lang}-${ch.id}`} // Key unik menyertakan `lang` agar React membuat DOM baru
+              key={`${lang}-${ch.id}`}
               className={`chapter-card absolute inset-x-0 flex flex-col items-center text-center max-w-xl space-y-4 sm:space-y-6 mx-auto ${
                 isPanelRight ? 'md:mr-0 md:ml-auto' : 'md:ml-0 md:mr-auto'
               }`}
