@@ -16,9 +16,9 @@ const systemsTranslations = {
       {
         id: 'explore',
         title: 'JELAJAH',
-        summary: 'Lintasi hutan rimba purba, reruntuhan candi, dan rimba mistis.',
-        headline: 'TEMUKAN JALAN YANG TERHAPUS DARI PRASASTI KUNO.',
-        description: 'Jelajahi keajaiban Nusantara secara bebas. Temukan reruntuhan kerajaan yang tenggelam, gua-gua sakral, dan tempat peristirahatan para dewa melalui penanda alam.',
+        summary: 'Lintasi hutan rimba purba, reruntuhan candi, dan rimba mistis',
+        headline: 'TEMUKAN JALAN YANG TERHAPUS DARI PRASASTI KUNO',
+        description: 'Jelajahi keajaiban Nusantara secara bebas. Temukan reruntuhan kerajaan yang tenggelam, gua-gua sakral, dan tempat peristirahatan para dewa melalui penanda alam',
         mechanicTitle: 'Eksplorasi Jelajah Alam Bebas',
         mechanicTag: 'FREE EXPLORATION SYSTEM',
         image: explore,
