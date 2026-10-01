@@ -274,12 +274,22 @@ export default function Preloader({
         <AnimatePresence>
           {phase === 2 && (
             <motion.div
-              key="clean-white-line"
-              className="hidden sm:block absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-white pointer-events-none"
+              key="glowing-gold-line-center"
+              className="hidden sm:block absolute z-20 top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-gradient-to-b from-transparent via-white via-amber-200 to-transparent shadow-[0_0_15px_rgba(252,211,77,0.7),0_0_5px_rgba(255,255,255,1)] pointer-events-none origin-center" // <-- PERUBAHAN: origin-center
               initial={{ scaleY: 0, opacity: 0 }}
-              animate={{ scaleY: 1, opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.1 } }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              animate={{ 
+                scaleY: 1, 
+                opacity: 1,
+              }}
+              exit={{ 
+                scaleY: 0,
+                opacity: 0, 
+                transition: { duration: 0.3, ease: "easeIn" } 
+              }}
+              transition={{
+                duration: 1.5, 
+                ease: [0.22, 1, 0.36, 1], 
+              }}
             />
           )}
         </AnimatePresence>
