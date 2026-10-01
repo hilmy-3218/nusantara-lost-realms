@@ -28,21 +28,21 @@ const systemsTranslations = {
           'Pengaruh Iklim Tropis & Perubahan Cuaca Gaib'
         ],
         deepDetail: {
-          overview: 'Dunia Nusantara dirancang tanpa petunjuk modern. Kepekaan mata dan telinga pemain dalam membaca angin, arus air, dan ukiran batu kuno adalah kunci utama penjelajahan.',
+          overview: 'Dunia Nusantara dirancang tanpa petunjuk modern. Kepekaan mata dan telinga pemain dalam membaca angin, arus air, dan ukiran batu kuno adalah kunci utama penjelajahan',
           mechanics: [
-            'Petunjuk Lingkungan: Amati jejak pusaka, cahaya ilusi, gemerisik dedaunan, dan ukiran aksara kuno.',
-            'Kelincahan Kanuragan: Memanjat tebing terjal, meniti akar pohon raksasa, dan menyeberangi jurang purba.',
-            'Reaksi Kodrat Alam: Hujan lebat, kabut mistis, dan gerhana dapat membongkar atau menyembunyikan portal rahasia.',
-            'Penemuan Pusaka: Temukan artefak legendaris dan altar pemujaan yang terlupakan.'
+            'Petunjuk Lingkungan: Amati jejak pusaka, cahaya ilusi, gemerisik dedaunan, dan ukiran aksara kuno',
+            'Kelincahan Kanuragan: Memanjat tebing terjal, meniti akar pohon raksasa, dan menyeberangi jurang purba',
+            'Reaksi Kodrat Alam: Hujan lebat, kabut mistis, dan gerhana dapat membongkar atau menyembunyikan portal rahasia',
+            'Penemuan Pusaka: Temukan artefak legendaris dan altar pemujaan yang terlupakan'
           ]
         }
       },
       {
         id: 'survive',
         title: 'BERTAHAN',
-        summary: 'Hadapi ancaman makhluk gaib dan keganasan rimba nusantara.',
-        headline: 'BERTAHAN HIDUP DI TANAH YANG DIPENUHI SUMPAH KUNO.',
-        description: 'Setiap jengkal tanah menyimpan bahaya. Hadapi binatang purba dan siluman penjaga, kelola stamina batin, serta manfaatkan flora mistis untuk bertahan.',
+        summary: 'Hadapi ancaman makhluk gaib dan keganasan rimba nusantara',
+        headline: 'BERTAHAN HIDUP DI TANAH YANG DIPENUHI SUMPAH KUNO',
+        description: 'Setiap jengkal tanah menyimpan bahaya. Hadapi binatang purba dan siluman penjaga, kelola stamina batin, serta manfaatkan flora mistis untuk bertahan',
         mechanicTitle: 'Sistem Survival & Kanuragan Adaptif',
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
@@ -52,21 +52,21 @@ const systemsTranslations = {
           'Pengelolaan Tenaga Dalam, Stamina, dan Ketahanan Tubuh'
         ],
         deepDetail: {
-          overview: 'Bertahan bukan sekadar mengayunkan senjata. Pemain harus membaca gerakan lawan, mengatur hawa murni, serta memanfaatkan kontur tanah.',
+          overview: 'Bertahan bukan sekadar mengayunkan senjata. Pemain harus membaca gerakan lawan, mengatur hawa murni, serta memanfaatkan kontur tanah',
           mechanics: [
-            'Jurus & Menghindar: Baca pola serangan musuh, hindari racun gaib, dan balikkan keadaan dengan serangan balasan.',
-            'Siasat Medan Tempur: Manfaatkan tebing tinggi, rawa beracun, dan reruntuhan batu sebagai perisai.',
-            'Manajemen Sumber Daya: Racik ramuan dari tumbuhan langka dan jaga ketahanan stamina fisik.',
-            'Intuisi Gaib: Rasakan getaran keberadaan musuh sebelum mereka menyerang dari kegelapan.'
+            'Jurus & Menghindar: Baca pola serangan musuh, hindari racun gaib, dan balikkan keadaan dengan serangan balasan',
+            'Siasat Medan Tempur: Manfaatkan tebing tinggi, rawa beracun, dan reruntuhan batu sebagai perisai',
+            'Manajemen Sumber Daya: Racik ramuan dari tumbuhan langka dan jaga ketahanan stamina fisik',
+            'Intuisi Gaib: Rasakan getaran keberadaan musuh sebelum mereka menyerang dari kegelapan'
           ]
         }
       },
       {
         id: 'discover',
         title: 'SINGKAP',
-        summary: 'Pecahkan teka-teki prasasti dan bangkitkan rahasia peradaban tua.',
-        headline: 'SINGKAP RAHASIA YANG TERKUBUR DI BALIK RERUNTUHAN CANDI.',
-        description: 'Rangkai potongan kisah peradaban yang musnah melalui prasasti kuno, relief sakral, dan manuskrip lontar untuk mengakhiri kutukan tanah Nusantara.',
+        summary: 'Pecahkan teka-teki prasasti dan bangkitkan rahasia peradaban tua',
+        headline: 'SINGKAP RAHASIA YANG TERKUBUR DI BALIK RERUNTUHAN CANDI',
+        description: 'Rangkai potongan kisah peradaban yang musnah melalui prasasti kuno, relief sakral, dan manuskrip lontar untuk mengakhiri kutukan tanah Nusantara',
         mechanicTitle: 'Rekonstruksi Lore & Teka-Teki Candi',
         mechanicTag: 'DISCOVERY & PUZZLE SYSTEM',
         image: discover,
@@ -76,21 +76,21 @@ const systemsTranslations = {
           'Pengumpulkan Fragments Lontar Rahasia Nusantara'
         ],
         deepDetail: {
-          overview: 'Sejarah Nusantara tidak tertulis secara lugas. Anda harus mengamati simbol sakral, menyusun mekanisme batu kuno, dan memecahkan teka-teki elemen.',
+          overview: 'Sejarah Nusantara tidak tertulis secara lugas. Anda harus mengamati simbol sakral, menyusun mekanisme batu kuno, dan memecahkan teka-teki elemen',
           mechanics: [
-            'Observasi Prasasti: Amati ukiran simbol kuno, arca dewa, dan susunan batu magis.',
-            'Mekanisme Batu Kuno: Putar altar cermin, selaraskan pantulan cahaya matahari, dan buka gerbang rahasia.',
-            'Pencarian Serpihan Lontar: Kumpulkan catatan masa lalu untuk memahami silsilah para dewa dan raja.',
-            'Ritus Pembebasan: Bangkitkan energi tempat sakral untuk menetralkan kabut kegelapan.'
+            'Observasi Prasasti: Amati ukiran simbol kuno, arca dewa, dan susunan batu magis',
+            'Mekanisme Batu Kuno: Putar altar cermin, selaraskan pantulan cahaya matahari, dan buka gerbang rahasia',
+            'Pencarian Serpihan Lontar: Kumpulkan catatan masa lalu untuk memahami silsilah para dewa dan raja',
+            'Ritus Pembebasan: Bangkitkan energi tempat sakral untuk menetralkan kabut kegelapan'
           ]
         }
       },
       {
         id: 'switching',
         title: 'PENJAGA',
-        summary: 'Beralih di antara Empat Guardian dengan pusaka & ajian unik.',
-        headline: 'SATUKAN EMPAT KEKUATAN GUARDIAN PENJAGA ALAM.',
-        description: 'Kendalikan Empat Penjaga Nusantara yang dianugerahi senjata pusaka dan ajian magis berbeda. Beralih secara instan dalam pertarungan untuk menciptakan kombo mematikan.',
+        summary: 'Beralih di antara Empat Guardian dengan pusaka & ajian unik',
+        headline: 'SATUKAN EMPAT KEKUATAN GUARDIAN PENJAGA ALAM',
+        description: 'Kendalikan Empat Penjaga Nusantara yang dianugerahi senjata pusaka dan ajian magis berbeda. Beralih secara instan dalam pertarungan untuk menciptakan kombo mematikan',
         mechanicTitle: 'Sistem Berganti Penjaga Mistik',
         mechanicTag: 'DYNAMIC GUARDIAN SYSTEM',
         image: switching,
@@ -100,12 +100,12 @@ const systemsTranslations = {
           'Sinergi Kombo Mistik untuk Menembus Pertahanan Musuh'
         ],
         deepDetail: {
-          overview: 'Empat Penjaga mewakili empat elemen utama Nusantara. Keahlian Anda mengganti Penjaga saat bertarung menjadi faktor penentu kemenangan.',
+          overview: 'Empat Penjaga mewakili empat elemen utama Nusantara. Keahlian Anda mengganti Penjaga saat bertarung menjadi faktor penentu kemenangan',
           mechanics: [
-            'Instant Switch: Berpindah Guardian secara cepat di tengah pertarungan tanpa memutus alur serangan.',
-            'Ajian & Pusaka Unik: Setiap Penjaga membawa keris, tombak, atau ajian tak kasat mata yang spesifik.',
-            'Taktik Elemen: Gunakan Guardian pemukul jarak dekat untuk merusak perisai, lalu ganti ke Guardian sihir untuk mengeksekusi.',
-            'Kombo Berantai: Gabungkan skill Penjaga secara berurutan untuk menciptakan ledakan energi gaib.'
+            'Instant Switch: Berpindah Guardian secara cepat di tengah pertarungan tanpa memutus alur serangan',
+            'Ajian & Pusaka Unik: Setiap Penjaga membawa keris, tombak, atau ajian tak kasat mata yang spesifik',
+            'Taktik Elemen: Gunakan Guardian pemukul jarak dekat untuk merusak perisai, lalu ganti ke Guardian sihir untuk mengeksekusi',
+            'Kombo Berantai: Gabungkan skill Penjaga secara berurutan untuk menciptakan ledakan energi gaib'
           ]
         }
       }
@@ -120,9 +120,9 @@ const systemsTranslations = {
       {
         id: 'explore',
         title: 'EXPLORE',
-        summary: 'Traverse ancient jungles, forgotten temples, and mystical realms.',
-        headline: 'DISCOVER PATHS ERASED FROM ANCIENT STONE INSCRIPTIONS.',
-        description: 'Roam the enchanted islands freely. Discover sunken kingdom ruins, sacred caves, and forgotten shrines guided only by environmental markers.',
+        summary: 'Traverse ancient jungles, forgotten temples, and mystical realms',
+        headline: 'DISCOVER PATHS ERASED FROM ANCIENT STONE INSCRIPTIONS',
+        description: 'Roam the enchanted islands freely. Discover sunken kingdom ruins, sacred caves, and forgotten shrines guided only by environmental markers',
         mechanicTitle: 'Free Realm Exploration',
         mechanicTag: 'FREE EXPLORATION SYSTEM',
         image: explore,
@@ -132,21 +132,21 @@ const systemsTranslations = {
           'Tropical Weather Dynamics & Mystical Phenomena'
         ],
         deepDetail: {
-          overview: 'No modern waypoints exist in Nusantara. Your perception of environmental cues like wind direction, ancient carvings, and water flows dictates your survival.',
+          overview: 'No modern waypoints exist in Nusantara. Your perception of environmental cues like wind direction, ancient carvings, and water flows dictates your survival',
           mechanics: [
-            'Environmental Clues: Observe ancient runes, phantom lights, rustling flora, and footprint trails.',
-            'Agile Traversing: Scale steep cliffs, navigate gigantic roots, and leap over misty chasms.',
-            'A Reactive World: Torrential rain, eclipse phases, and mystical fogs dynamically reveal or seal hidden paths.',
-            'Artifact Discoveries: Unearth legendary relics and forgotten altars.'
+            'Environmental Clues: Observe ancient runes, phantom lights, rustling flora, and footprint trails',
+            'Agile Traversing: Scale steep cliffs, navigate gigantic roots, and leap over misty chasms',
+            'A Reactive World: Torrential rain, eclipse phases, and mystical fogs dynamically reveal or seal hidden paths',
+            'Artifact Discoveries: Unearth legendary relics and forgotten altars'
           ]
         }
       },
       {
         id: 'survive',
         title: 'SURVIVE',
-        summary: 'Confront mythical beasts and the untamed wilderness.',
-        headline: 'SURVIVE UPON LANDS BOUND BY ANCIENT CURSES.',
-        description: 'Danger lurks in every shadow. Face savage beasts and territorial spirits, balance your inner stamina, and utilize rare herbs to endure.',
+        summary: 'Confront mythical beasts and the untamed wilderness',
+        headline: 'SURVIVE UPON LANDS BOUND BY ANCIENT CURSES',
+        description: 'Danger lurks in every shadow. Face savage beasts and territorial spirits, balance your inner stamina, and utilize rare herbs to endure',
         mechanicTitle: 'Adaptive Combat & Survival',
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
@@ -156,21 +156,21 @@ const systemsTranslations = {
           'Inner Energy, Stamina, and Vitality Management'
         ],
         deepDetail: {
-          overview: 'Survival relies on more than raw force. Read enemy movements, channel inner energy, and use terrain to outsmart deadly threats.',
+          overview: 'Survival relies on more than raw force. Read enemy movements, channel inner energy, and use terrain to outsmart deadly threats',
           mechanics: [
-            'Tactical Evasion: Read beast attack patterns, dodge dark magic, and strike weak points.',
-            'Terrain Mastery: Use cliff edges, toxic swamps, and stone pillars as cover.',
-            'Resource Crafting: Brew remedies using rare tropical herbs and conserve stamina.',
-            'Spiritual Intuition: Sense hostile presence before ambush strikes.'
+            'Tactical Evasion: Read beast attack patterns, dodge dark magic, and strike weak points',
+            'Terrain Mastery: Use cliff edges, toxic swamps, and stone pillars as cover',
+            'Resource Crafting: Brew remedies using rare tropical herbs and conserve stamina',
+            'Spiritual Intuition: Sense hostile presence before ambush strikes'
           ]
         }
       },
       {
         id: 'discover',
         title: 'DISCOVER',
-        summary: 'Solve ancient temple puzzles and unearth lost civilization lore.',
-        headline: 'UNCOVER SECRETS BURIED BENEATH TEMPLE RUINS.',
-        description: 'Piece together a fallen civilization history through stone inscriptions, sacred reliefs, and palm-leaf manuscripts to break the ancient curse.',
+        summary: 'Solve ancient temple puzzles and unearth lost civilization lore',
+        headline: 'UNCOVER SECRETS BURIED BENEATH TEMPLE RUINS',
+        description: 'Piece together a fallen civilization history through stone inscriptions, sacred reliefs, and palm-leaf manuscripts to break the ancient curse',
         mechanicTitle: 'Temple Puzzle & Lore Investigation',
         mechanicTag: 'DISCOVERY & PUZZLE SYSTEM',
         image: discover,
@@ -180,21 +180,21 @@ const systemsTranslations = {
           'Collect Forgotten Palm-Leaf Manuscripts'
         ],
         deepDetail: {
-          overview: 'Nusantara history is veiled in mystery. Decode sacred symbols, align ancient mirror mechanisms, and solve elemental puzzles.',
+          overview: 'Nusantara history is veiled in mystery. Decode sacred symbols, align ancient mirror mechanisms, and solve elemental puzzles',
           mechanics: [
-            'Relic Inspection: Study ancient stone symbols, deity statues, and magic arrays.',
-            'Ancient Mechanisms: Rotate light-reflecting altars and realign stone portals.',
-            'Manuscript Collection: Gather scattered lontar leaves to reconstruct lore.',
-            'Purification Rituals: Reactivate sacred altars to dispel demonic miasma.'
+            'Relic Inspection: Study ancient stone symbols, deity statues, and magic arrays',
+            'Ancient Mechanisms: Rotate light-reflecting altars and realign stone portals',
+            'Manuscript Collection: Gather scattered lontar leaves to reconstruct lore',
+            'Purification Rituals: Reactivate sacred altars to dispel demonic miasma'
           ]
         }
       },
       {
         id: 'switching',
         title: 'GUARDIANS',
-        summary: 'Switch instantly between Four Guardians with unique relics & arts.',
-        headline: 'UNITE THE FOUR GUARDIAN FORCES OF NUSANTARA.',
-        description: 'Control Four Realm Guardians endowed with unique weapons and mystical arts. Seamlessly switch mid-combat to execute devastating synergy combos.',
+        summary: 'Switch instantly between Four Guardians with unique relics & arts',
+        headline: 'UNITE THE FOUR GUARDIAN FORCES OF NUSANTARA',
+        description: 'Control Four Realm Guardians endowed with unique weapons and mystical arts. Seamlessly switch mid-combat to execute devastating synergy combos',
         mechanicTitle: 'Dynamic Guardian Switch System',
         mechanicTag: 'DYNAMIC GUARDIAN SYSTEM',
         image: switching,
@@ -204,12 +204,12 @@ const systemsTranslations = {
           'Synergistic Elemental Combos to Shatter Defenses'
         ],
         deepDetail: {
-          overview: 'The Four Guardians wield the primary elements of the realm. Master swapping them dynamically during intense battles.',
+          overview: 'The Four Guardians wield the primary elements of the realm. Master swapping them dynamically during intense battles',
           mechanics: [
-            'Instant Transition: Switch Guardians effortlessly without breaking combat momentum.',
-            'Relics & Martial Arts: Utilize kris daggers, spears, or mystical energy fields.',
-            'Elemental Strategy: Use heavy Guardians to shatter armor, then swap to magical Guardians to execute.',
-            'Chained Combos: Chain Guardian skills sequentially for explosive elemental bursts.'
+            'Instant Transition: Switch Guardians effortlessly without breaking combat momentum',
+            'Relics & Martial Arts: Utilize kris daggers, spears, or mystical energy fields',
+            'Elemental Strategy: Use heavy Guardians to shatter armor, then swap to magical Guardians to execute',
+            'Chained Combos: Chain Guardian skills sequentially for explosive elemental bursts'
           ]
         }
       }
