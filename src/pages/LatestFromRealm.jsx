@@ -172,7 +172,7 @@ export default function LatestFromRealm({ lang = 'IND' }) {
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 pb-6 border-b border-[#132d20]"
         >
           <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#f0e3bf] via-[#d4af37] to-[#8a6f28] uppercase font-serif drop-shadow-md">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#f0e3bf] via-[#d4af37] to-[#8a6f28] uppercase drop-shadow-md font-['MedievalSharp']">
               {currentLabels.heading}
             </h2>
           </div>
