@@ -340,45 +340,264 @@ export default function Preloader({
             {phase === 0 && (
               <motion.div
                 key="preloader"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1, filter: 'blur(8px)' }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, scale: 0.85, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{
+                  opacity: 0,
+                  scale: 1.15,
+                  filter: "blur(12px)",
+                  y: -20,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="flex flex-col items-center gap-8"
               >
-                <div className="relative w-32 h-32 flex items-center justify-center">
-                  <div className="absolute inset-0 border border-dashed border-[#2a4235]/70 rounded-full animate-[spin_30s_linear_infinite_reverse]" />
-                  <div className="absolute inset-[-6px] border border-[#d4af37]/20 rounded-full animate-[spin_20s_linear_infinite]">
-                    <div className="w-2 h-2 bg-[#d4af37] rounded-full absolute -top-1 left-1/2 -translate-x-1/2 shadow-[0_0_10px_#d4af37]" />
+                {/* ANCIENT RELIC */}
+                <div className="relative w-40 h-40 flex items-center justify-center">
+
+                  {/* Outer mystical aura */}
+                  <motion.div
+                    className="absolute inset-[-18px] rounded-full border border-[#d4af37]/10"
+                    animate={{
+                      scale: [1, 1.08, 1],
+                      opacity: [0.2, 0.5, 0.2],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+
+                  {/* Ancient outer ring */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full border border-dashed border-[#8a6f28]/60"
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 35,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+
+                  {/* Second rotating seal */}
+                  <motion.div
+                    className="absolute inset-[10px] rounded-full border border-[#d4af37]/20"
+                    animate={{ rotate: -360 }}
+                    transition={{
+                      duration: 22,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+
+                  {/* Decorative cardinal marks */}
+                  <div className="absolute inset-0">
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 text-[#d4af37]/60 text-[10px]">
+                      ◈
+                    </span>
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[#d4af37]/60 text-[10px]">
+                      ◈
+                    </span>
+                    <span className="absolute left-0 top-1/2 -translate-y-1/2 text-[#d4af37]/60 text-[10px]">
+                      ◈
+                    </span>
+                    <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[#d4af37]/60 text-[10px]">
+                      ◈
+                    </span>
                   </div>
-                  <div className="w-12 h-12 border border-[#d4af37] rotate-45 flex items-center justify-center bg-[#050c08]/90 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
-                    <div className="w-3 h-3 bg-[#d4af37] rotate-45 animate-pulse shadow-[0_0_12px_#d4af37]" />
-                  </div>
+
+                  {/* Rotating energy particles */}
+                  <motion.div
+                    className="absolute inset-[-4px]"
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  >
+                    <span className="absolute top-1/2 -left-1 w-2 h-2 rounded-full bg-[#d4af37] shadow-[0_0_14px_#d4af37]" />
+                    <span className="absolute top-[15%] right-[12%] w-1.5 h-1.5 rounded-full bg-[#b7c7a7] shadow-[0_0_10px_#b7c7a7]" />
+                    <span className="absolute bottom-[12%] left-[20%] w-1 h-1 rounded-full bg-[#d4af37] shadow-[0_0_8px_#d4af37]" />
+                  </motion.div>
+
+                  {/* Inner glow */}
+                  <motion.div
+                    className="absolute w-24 h-24 rounded-full bg-[#d4af37]/5 blur-xl"
+                    animate={{
+                      scale: [0.8, 1.2, 0.8],
+                      opacity: [0.3, 0.7, 0.3],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+
+                  {/* Ancient diamond relic */}
+                  <motion.div
+                    className="relative w-14 h-14 rotate-45 border border-[#d4af37] bg-[#050c08]/95 shadow-[0_0_30px_rgba(212,175,55,0.35)] flex items-center justify-center"
+                    animate={{
+                      boxShadow: [
+                        "0 0 15px rgba(212,175,55,0.2)",
+                        "0 0 35px rgba(212,175,55,0.55)",
+                        "0 0 15px rgba(212,175,55,0.2)",
+                      ],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {/* Inner rune */}
+                    <motion.div
+                      className="w-5 h-5 border border-[#d4af37] rotate-45 flex items-center justify-center"
+                      animate={{
+                        rotate: [45, 135, 225, 315, 405],
+                        scale: [0.8, 1, 0.8],
+                      }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    >
+                      <div className="w-2 h-2 bg-[#d4af37] shadow-[0_0_15px_#d4af37]" />
+                    </motion.div>
+                  </motion.div>
+
+                  {/* Floating ancient particles */}
+                  {[...Array(8)].map((_, i) => (
+                    <motion.span
+                      key={i}
+                      className="absolute w-[3px] h-[3px] rounded-full bg-[#d4af37]"
+                      style={{
+                        left: `${50 + Math.cos(i * 0.785) * 58}%`,
+                        top: `${50 + Math.sin(i * 0.785) * 58}%`,
+                      }}
+                      animate={{
+                        opacity: [0, 1, 0],
+                        scale: [0.5, 1.5, 0.5],
+                      }}
+                      transition={{
+                        duration: 2 + (i % 3),
+                        delay: i * 0.25,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                  ))}
                 </div>
 
-                <p className="text-xs sm:text-sm tracking-[0.25em] text-[#8a9e91] uppercase font-serif italic">
-                  An Ancient Signal Has Been Found
-                </p>
+                {/* ANCIENT MESSAGE */}
+                <motion.div
+                  animate={{
+                    opacity: [0.65, 1, 0.65],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="text-center"
+                >
+                  <p className="text-xs sm:text-sm tracking-[0.28em] text-[#a7b8aa] uppercase font-serif italic">
+                    An Ancient Signal Has Been Found
+                  </p>
 
+                  <motion.div
+                    className="mt-2 h-px bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent"
+                    animate={{
+                      scaleX: [0.3, 1, 0.3],
+                      opacity: [0.2, 0.8, 0.2],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                </motion.div>
+
+                {/* LOADING SYSTEM */}
                 <div className="w-full max-w-sm">
+
                   <div className="flex justify-between items-center text-[10px] tracking-[0.2em] font-mono mb-2">
-                    <span className="text-[#5a7062] flex items-center gap-2">
+
+                    <span className="text-[#667d6d] flex items-center gap-2">
                       <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4af37] opacity-75" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4af37] opacity-60" />
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d4af37]" />
                       </span>
-                      CALIBRATING SENSORS
+
+                      AWAKENING THE REALMS
                     </span>
-                    <span className="text-[#d4af37] font-bold font-mono">
-                      {progress}<span className="text-[9px] ml-0.5">%</span>
-                    </span>
+
+                    <motion.span
+                      className="text-[#d4af37] font-bold font-mono"
+                      animate={{
+                        opacity: [0.6, 1, 0.6],
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                      }}
+                    >
+                      {progress}
+                      <span className="text-[9px] ml-0.5">%</span>
+                    </motion.span>
+
                   </div>
-                  <div className="w-full h-[5px] bg-[#09120e] border border-[#1a2d22] rounded-full overflow-hidden p-[0.5px]">
-                    <div
-                      className="h-full bg-gradient-to-r from-[#183626] via-[#3d6e52] to-[#d4af37] rounded-full transition-all duration-150"
-                      style={{ width: `${progress}%` }}
+
+                  {/* Ancient progress bar */}
+                  <div className="relative w-full h-[6px] bg-[#07100b] border border-[#24382b] rounded-full overflow-hidden">
+
+                    {/* Energy */}
+                    <motion.div
+                      className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#183626] via-[#567c5b] to-[#d4af37] rounded-full"
+                      style={{
+                        width: `${progress}%`,
+                      }}
+                      transition={{
+                        duration: 0.2,
+                        ease: "linear",
+                      }}
                     />
+
+                    {/* Moving light */}
+                    <motion.div
+                      className="absolute top-0 bottom-0 w-16 bg-gradient-to-r from-transparent via-[#fff4c2]/60 to-transparent blur-sm"
+                      animate={{
+                        x: ["-100%", "700%"],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    />
+
                   </div>
+
+                  {/* Loading lore */}
+                  <motion.p
+                    className="mt-3 text-center text-[9px] tracking-[0.25em] text-[#506457] uppercase font-serif"
+                    animate={{
+                      opacity: [0.3, 0.8, 0.3],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                    }}
+                  >
+                    The Lost Realms Are Awakening
+                  </motion.p>
+
                 </div>
               </motion.div>
             )}
