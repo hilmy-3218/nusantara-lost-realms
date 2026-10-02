@@ -252,10 +252,10 @@ export default function Maps({ lang = 'IND' }) {
   const particles = useMemo(() => {
     return Array.from({ length: 22 }).map((_, i) => ({
       id: i,
-      size: Math.random() * 3 + 1.5,       // Ukuran (1.5px - 4.5px)
-      left: Math.random() * 100,         // Posisi horisontal (0% - 100%)
-      duration: Math.random() * 4 + 4,   // Waktu naik (4 detik - 8 detik)
-      delay: Math.random() * 5,          // Waktu tunggu acak awal
+      size: Math.random() * 3 + 1.5,
+      left: Math.random() * 100,    
+      duration: Math.random() * 4 + 4,
+      delay: Math.random() * 5,
     }));
   }, []);
 
@@ -331,7 +331,7 @@ export default function Maps({ lang = 'IND' }) {
               <div className="absolute inset-0 bg-[#070b09]/20 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070b09] via-transparent to-transparent opacity-90 pointer-events-none" />
 
-              {/* ================= EFEK PARTIKEL DARI BAWAH ================= */}
+              {/* EFEK PARTIKEL DARI BAWAH */}
               <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
                 {particles.map((p) => (
                   <motion.div
@@ -344,8 +344,8 @@ export default function Maps({ lang = 'IND' }) {
                       bottom: '-12px',
                     }}
                     animate={{
-                      y: [0, -550],                     // Meluncur ke atas sejauh 550px
-                      opacity: [0, 0.8, 0.8, 0],       // Muncul perlahan lalu menghilang di atas
+                      y: [0, -550],                  
+                      opacity: [0, 0.8, 0.8, 0],      
                       scale: [0.6, 1.2, 0.5],
                     }}
                     transition={{
@@ -357,7 +357,6 @@ export default function Maps({ lang = 'IND' }) {
                   />
                 ))}
               </div>
-              {/* ============================================================= */}
 
               {/* Interactive Map Pins */}
               {currentLocations.map((loc) => {
