@@ -771,7 +771,7 @@ export default function MythicalBestiary({ lang = 'IND', t }) {
 
           {/* Subtitle font serif/sans dengan kejelasan tinggi */}
           <p className="italic text-amber-200/70 text-sm sm:text-base font-serif tracking-wide max-w-xl mx-auto leading-relaxed">
-            {t?.subtitle || (lang === 'IND' ? '"Lahir dari eter purba dan isolasi berabad-abad, tidak jinak maupun fana."' : '"Born from primeval ether and centuries of isolation, neither tame nor mortal."')}
+            {t?.subtitle || (lang === 'IND' ? '"Lahir dari eter purba dan isolasi berabad-abad, tidak jinak maupun fana"' : '"Born from primeval ether and centuries of isolation, neither tame nor mortal"')}
           </p>
         </motion.header>
 
