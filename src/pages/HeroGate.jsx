@@ -9,7 +9,7 @@ const translations = {
     badge: 'GERBANG GAIB TELAH TERBUKA',
     title: 'NUSANTARA',
     subtitle: 'ALAM YANG HILANG',
-    tagline: '“Beberapa dunia tidak benar-benar sirna. Mereka hanya tertidur, menanti jiwa yang berani memanggilnya kembali.”',
+    tagline: '“Beberapa dunia tidak benar-benar sirna. Mereka hanya tertidur, menanti jiwa yang berani memanggilnya kembali”',
     ctaPrimary: 'MASUKI GERBANG',
     ctaSecondary: 'TAMPILKAN TRAILER',
     scrollText: 'GULIR UNTUK MENUNGKAP'
@@ -18,7 +18,7 @@ const translations = {
     badge: 'THE GATEWAY HAS AWAKENED',
     title: 'NUSANTARA',
     subtitle: 'LOST REALM',
-    tagline: '“Some worlds are not lost. They are waiting for a brave soul to awaken them.”',
+    tagline: '“Some worlds are not lost. They are waiting for a brave soul to awaken them”',
     ctaPrimary: 'ENTER THE REALM',
     ctaSecondary: 'WATCH TRAILER',
     scrollText: 'SCROLL TO DISCOVER'
