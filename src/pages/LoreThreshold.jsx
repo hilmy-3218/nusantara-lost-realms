@@ -16,7 +16,7 @@ const loreChapters = {
       subtitle: 'GERBANG AWAL',
       title: 'TAKDIR EMPAT PENJAGA',
       quote:
-        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata—sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia”',
+        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia”',
       bgImage: gate,
       align: 'right'
     },
