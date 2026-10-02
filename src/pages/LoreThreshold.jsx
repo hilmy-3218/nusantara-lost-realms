@@ -16,7 +16,7 @@ const loreChapters = {
       subtitle: 'GERBANG AWAL',
       title: 'TAKDIR EMPAT PENJAGA',
       quote:
-        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata—sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia.”',
+        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata—sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia”',
       bgImage: gate,
       align: 'right'
     },
@@ -26,7 +26,7 @@ const loreChapters = {
       subtitle: 'DUNIA YANG TERLUPAKAN',
       title: 'JEJAK DI BALIK GERBANG',
       quote:
-        '“Di balik gerbang yang tak seharusnya terbuka, terbentang dunia asing yang telah lama terkubur dari ingatan manusia. Di antara reruntuhan kerajaan dan hutan yang diselimuti kegelapan, empat penjaga mulai mengungkap jejak sebuah kutukan yang telah bertahan selama berabad-abad.”',
+        '“Di balik gerbang yang tak seharusnya terbuka, terbentang dunia asing yang telah lama terkubur dari ingatan manusia. Di antara reruntuhan kerajaan dan hutan yang diselimuti kegelapan, empat penjaga mulai mengungkap jejak sebuah kutukan yang telah bertahan selama berabad-abad”',
       bgImage: BgLore,
       align: 'left'
     },
@@ -36,7 +36,7 @@ const loreChapters = {
       subtitle: 'THRONE OF RUIN',
       title: 'DI HADAPAN RAJA KUTUKAN',
       quote:
-        '“Jejak kutukan akhirnya membawa empat Penjaga ke Throne of Ruin, tempat Raja Kutukan masih bersemayam setelah empat abad dalam kegelapan.”',
+        '“Jejak kutukan akhirnya membawa empat Penjaga ke Throne of Ruin, tempat Raja Kutukan masih bersemayam setelah empat abad dalam kegelapan”',
       bgImage: throne,
       align: 'right'
     }
@@ -48,7 +48,7 @@ const loreChapters = {
       subtitle: 'THE FIRST GATEWAY',
       title: 'DESTINY OF THE FOUR GUARDIANS',
       quote:
-        '“Behind forgotten ancient ruins, four guardians stand before an invisible gate—a rift to another dimension that mankind should have never touched.”',
+        '“Behind forgotten ancient ruins, four guardians stand before an invisible gate—a rift to another dimension that mankind should have never touched”',
       bgImage: gate,
       align: 'right'
     },
@@ -58,7 +58,7 @@ const loreChapters = {
       subtitle: 'THE FORGOTTEN WORLD',
       title: 'FOOTSTEPS BEYOND THE GATE',
       quote:
-        '“Beyond the gate that should never have opened lies an alien world long buried from human memory. Among kingdom ruins and darkness-shrouded forests, four guardians begin to uncover the traces of a curse that has endured for centuries.”',
+        '“Beyond the gate that should never have opened lies an alien world long buried from human memory. Among kingdom ruins and darkness-shrouded forests, four guardians begin to uncover the traces of a curse that has endured for centuries”',
       bgImage: BgLore,
       align: 'left'
     },
@@ -68,7 +68,7 @@ const loreChapters = {
       subtitle: 'THRONE OF RUIN',
       title: 'BEFORE THE CURSE KING',
       quote:
-        '“The trail of the curse finally leads the four Guardians to the Throne of Ruin, where the Curse King still dwells after four centuries of darkness.”',
+        '“The trail of the curse finally leads the four Guardians to the Throne of Ruin, where the Curse King still dwells after four centuries of darkness”',
       bgImage: throne,
       align: 'right'
     }
