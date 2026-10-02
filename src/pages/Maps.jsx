@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Eye, Compass } from 'lucide-react';
+import { Shield, Eye } from 'lucide-react';
 import MapBg from '../assets/territory/map.jpg';
 import verdant from '../assets/territory/verdant_wilds.jpg';
 import arcapura from '../assets/territory/arcapura_ruins.jpg';
@@ -248,7 +248,17 @@ export default function Maps({ lang = 'IND' }) {
 
   const selectedLoc = currentLocations.find(loc => loc.id === selectedId) || currentLocations[0];
 
-  // Variasi animasi saat halaman dimuat/di-scroll ke area ini
+  // Mengunci data partikel agar tidak di-regenerate saat komponen re-render / klik pin
+  const particles = useMemo(() => {
+    return Array.from({ length: 22 }).map((_, i) => ({
+      id: i,
+      size: Math.random() * 3 + 1.5,       // Ukuran (1.5px - 4.5px)
+      left: Math.random() * 100,         // Posisi horisontal (0% - 100%)
+      duration: Math.random() * 4 + 4,   // Waktu naik (4 detik - 8 detik)
+      delay: Math.random() * 5,          // Waktu tunggu acak awal
+    }));
+  }, []);
+
   const sectionVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -281,16 +291,13 @@ export default function Maps({ lang = 'IND' }) {
       variants={sectionVariants}
     >
       <div className="max-w-7xl mx-auto">
-      
-        {/* Header Judul Peta */}        
+        
+        {/* Header Judul Peta */}
         <motion.div className="mb-8 text-center" variants={itemVariants}>
-
-          {/* LABEL */}
           <p className="font-['Cinzel'] text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#d4af37]/70 mb-2">
             {lang === 'IND' ? 'EKSPLORASI WILAYAH' : 'WORLD EXPLORATION'}
           </p>
 
-          {/* TITLE */}
           <h2
             className="font-['Cinzel_Decorative'] text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.08em] text-transparent bg-clip-text
               bg-gradient-to-b from-[#fff8dc] via-[#d4af37] to-[#8f6817] uppercase drop-shadow-[0_3px_12px_rgba(212,175,55,0.35)] leading-tight"
@@ -298,15 +305,11 @@ export default function Maps({ lang = 'IND' }) {
             {lang === 'IND' ? 'WILAYAH YANG TERLUPAKAN' : 'THE FORGOTTEN REALMS'}
           </h2>
 
-          {/* DECORATION */}
           <div className="flex items-center justify-center gap-3 mt-4">
-
             <div className="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent via-[#d4af37]/60 to-[#d4af37]"/>
-
             <div className="relative w-2 h-2 rotate-45 bg-[#d4af37] shadow-[0_0_10px_rgba(212,175,55,0.7)]">
               <div className="absolute inset-[2px] bg-[#fff3b0]" />
             </div>
-
             <div className="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent via-[#d4af37]/60 to-[#d4af37]"/>
           </div>
         </motion.div>
@@ -327,6 +330,34 @@ export default function Maps({ lang = 'IND' }) {
               />
               <div className="absolute inset-0 bg-[#070b09]/20 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070b09] via-transparent to-transparent opacity-90 pointer-events-none" />
+
+              {/* ================= EFEK PARTIKEL DARI BAWAH ================= */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                {particles.map((p) => (
+                  <motion.div
+                    key={p.id}
+                    className="absolute rounded-full bg-[#d4af37] shadow-[0_0_8px_#d4af37]"
+                    style={{
+                      width: p.size,
+                      height: p.size,
+                      left: `${p.left}%`,
+                      bottom: '-12px',
+                    }}
+                    animate={{
+                      y: [0, -550],                     // Meluncur ke atas sejauh 550px
+                      opacity: [0, 0.8, 0.8, 0],       // Muncul perlahan lalu menghilang di atas
+                      scale: [0.6, 1.2, 0.5],
+                    }}
+                    transition={{
+                      duration: p.duration,
+                      repeat: Infinity,
+                      ease: 'linear',
+                      delay: p.delay,
+                    }}
+                  />
+                ))}
+              </div>
+              {/* ============================================================= */}
 
               {/* Interactive Map Pins */}
               {currentLocations.map((loc) => {
@@ -411,13 +442,13 @@ export default function Maps({ lang = 'IND' }) {
           {/* Sidebar Panel */}
           <div className="bg-[#080d0a] border-2 border-[#3b2d13] rounded-xl p-5 md:p-7 flex flex-col justify-between shadow-[0_0_30px_rgba(212,175,55,0.1)] relative overflow-hidden">
             
-            {/* Aksen Sudut Ukiran Klasik Nusantara (Pojok-pojok Frame) */}
+            {/* Aksen Sudut Ukiran Klasik Nusantara */}
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#d4af37] pointer-events-none" />
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#d4af37] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#d4af37] pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#d4af37] pointer-events-none" />
 
-            {/* Background Motif Tradisional Halus (Watermark Batik Geometris) */}
+            {/* Background Motif Tradisional */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
 
             <AnimatePresence mode="wait">
@@ -440,7 +471,7 @@ export default function Maps({ lang = 'IND' }) {
                   </span>
                 </div>
 
-                {/* Frame Gambar Wilayah ala Peta Kuno */}
+                {/* Frame Gambar Wilayah */}
                 <div className="relative mt-5 rounded-md border border-[#3b2d13] overflow-hidden group shadow-lg">
                   <img 
                     src={selectedLoc.image} 
@@ -464,7 +495,7 @@ export default function Maps({ lang = 'IND' }) {
                   </div>
                 </div>
 
-                {/* Kotak Kutipan & Deskripsi (Gaya Prasasti/Kitab) */}
+                {/* Kotak Kutipan & Deskripsi */}
                 <div className="mt-4 p-4 rounded bg-[#040705] border border-[#3b2d13]/50 relative shadow-inner">
                   <div className="absolute top-2 right-3 text-[#d4af37]/20 font-serif text-xl">“</div>
                   <p className="text-xs italic text-[#e6c562] mb-2 font-serif tracking-wide">{selectedLoc.quote}</p>
@@ -485,7 +516,7 @@ export default function Maps({ lang = 'IND' }) {
 
                   {selectedLoc.boss && (
                     <div className="flex justify-between items-start gap-4 bg-red-950/10 p-2 rounded border border-red-900/20">
-                      <span className="text-gray-400 whitespace-nowrap">{lang === 'IND' ? 'Penguasa / Raja Mitos:' : 'Region Ruler:'}</span>
+                      <span className="text-gray-400 whitespace-nowrap">{lang === 'IND' ? 'Penguasa' : 'Region Ruler:'}</span>
                       <span className="text-red-400 font-bold text-right tracking-wide">{selectedLoc.boss}</span>
                     </div>
                   )}
@@ -509,7 +540,6 @@ export default function Maps({ lang = 'IND' }) {
             <div className="relative flex items-center justify-center py-5 mt-auto z-10">
               <div className="w-full border-t border-gradient border-[#3b2d13]" />
               <div className="absolute bg-[#080d0a] px-3 text-[#d4af37] flex items-center gap-2 border border-[#3b2d13] rounded-full py-0.5 shadow">
-                {/* Ikon Ornamen Megalitik / Motif Tradisional */}
                 <svg className="w-4 h-4 fill-current text-[#d4af37]" viewBox="0 0 24 24">
                   <path d="M12 2L2 12l10 10 10-10L12 2zm0 3.83L18.17 12 12 18.17 5.83 12 12 5.83z" />
                 </svg>
