@@ -10,13 +10,13 @@ const systemsTranslations = {
   IND: {
     tagline: 'MISTIK & SISTEM AKSI PETUALANGAN ALAM KUNO',
     title: 'ALAM NUSANTARA TIDAK MENGENAL AMPUN',
-    subtitle: 'Bertahan hidup di kepulauan yang terisolasi membutuhkan penguasaan olah kanuragan, kelincahan menjelajah reruntuhan candi, dan keselarasan energi gaib nusantara',
+    subtitle: 'Bertahan hidup di kepulauan yang terisolasi membutuhkan penguasaan olah kanuragan, kelincahan menjelajahi reruntuhan kuno, dan keselarasan dengan energi gaib Nusantara',
     closeText: 'METERAI DETAIL',
     pillars: [
       {
         id: 'explore',
         title: 'JELAJAH',
-        summary: 'Lintasi hutan rimba purba, reruntuhan candi, dan rimba mistis',
+        summary: 'Lintasi hutan rimba purba, reruntuhan kuno, dan rimba mistis',
         headline: 'TEMUKAN JALAN YANG TERHAPUS DARI PRASASTI KUNO',
         description: 'Jelajahi keajaiban Nusantara secara bebas. Temukan reruntuhan kerajaan yang tenggelam, gua-gua sakral, dan tempat peristirahatan para dewa melalui penanda alam',
         mechanicTitle: 'Eksplorasi Jelajah Alam Bebas',
@@ -114,13 +114,13 @@ const systemsTranslations = {
   ENG: {
     tagline: 'MYSTICAL ANCIENT NUSANTARA ACTION SYSTEMS',
     title: 'THE NUSANTARA REALM SHOWS NO MERCY',
-    subtitle: 'Surviving the lost tropical realm demands mastery of ancient martial arts, agile parkour across temple ruins, and harmony with mystical island energy',
+    subtitle: 'Surviving in the isolated archipelago requires mastery of martial arts, agility to navigate ancient ruins, and harmony with the mystical energy of Nusantara',
     closeText: 'SEAL DETAILS',
     pillars: [
       {
         id: 'explore',
         title: 'EXPLORE',
-        summary: 'Traverse ancient jungles, forgotten temples, and mystical realms',
+        summary: 'Traverse ancient forests, forgotten ruins, and mystical wilderness',
         headline: 'DISCOVER PATHS ERASED FROM ANCIENT STONE INSCRIPTIONS',
         description: 'Roam the enchanted islands freely. Discover sunken kingdom ruins, sacred caves, and forgotten shrines guided only by environmental markers',
         mechanicTitle: 'Free Realm Exploration',
