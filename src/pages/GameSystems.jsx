@@ -47,7 +47,7 @@ const systemsTranslations = {
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
         features: [
-          'Pertarungan Real-Time Melawan Makhluk Penjaga Wilayah',
+          'Pertarungan Real Time Melawan Makhluk Penjaga Wilayah',
           'Taktik Lingkungan & Pemanfaatan Flora Herbal Mistik',
           'Pengelolaan Tenaga Dalam, Stamina, dan Ketahanan Tubuh'
         ],
@@ -64,10 +64,10 @@ const systemsTranslations = {
       {
         id: 'discover',
         title: 'SINGKAP',
-        summary: 'Pecahkan teka-teki prasasti dan bangkitkan rahasia peradaban tua',
+        summary: 'Pecahkan teka teki prasasti dan bangkitkan rahasia peradaban tua',
         headline: 'SINGKAP RAHASIA YANG TERKUBUR DI BALIK RERUNTUHAN KUNO',
         description: 'Rangkai potongan kisah peradaban yang musnah melalui prasasti kuno, relief sakral, dan manuskrip lontar untuk mengakhiri kutukan tanah Nusantara',
-        mechanicTitle: 'Rekonstruksi Lore & Teka-Teki Candi',
+        mechanicTitle: 'Rekonstruksi Lore & Teka Teki Candi',
         mechanicTag: 'DISCOVERY & PUZZLE SYSTEM',
         image: discover,
         features: [
@@ -76,7 +76,7 @@ const systemsTranslations = {
           'Pengumpulkan Fragments Lontar Rahasia Nusantara'
         ],
         deepDetail: {
-          overview: 'Sejarah Nusantara tidak tertulis secara lugas. Anda harus mengamati simbol sakral, menyusun mekanisme batu kuno, dan memecahkan teka-teki elemen',
+          overview: 'Sejarah Nusantara tidak tertulis secara lugas. Anda harus mengamati simbol sakral, menyusun mekanisme batu kuno, dan memecahkan teka teki elemen',
           mechanics: [
             'Observasi Prasasti: Amati ukiran simbol kuno, arca dewa, dan susunan batu magis',
             'Mekanisme Batu Kuno: Putar altar cermin, selaraskan pantulan cahaya matahari, dan buka gerbang rahasia',
@@ -96,7 +96,7 @@ const systemsTranslations = {
         image: switching,
         features: [
           'Pergantian 4 Penjaga Secara Instan Tanpa Jeda Action',
-          'Senjata Pusaka & Ajian Khusus Masing-masing Penjaga',
+          'Senjata Pusaka & Ajian Khusus Masing masing Penjaga',
           'Sinergi Kombo Mistik untuk Menembus Pertahanan Musuh'
         ],
         deepDetail: {
@@ -151,7 +151,7 @@ const systemsTranslations = {
         mechanicTag: 'SURVIVAL & COMBAT SYSTEM',
         image: survive,
         features: [
-          'Real-Time Combat Against Territorial Mythical Beasts',
+          'Real Time Combat Against Territorial Mythical Beasts',
           'Environmental Hazards & Mystical Herbal Crafting',
           'Inner Energy, Stamina, and Vitality Management'
         ],
