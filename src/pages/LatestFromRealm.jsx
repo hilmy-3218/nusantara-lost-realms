@@ -141,7 +141,7 @@ export default function LatestFromRealm({ lang = 'IND' }) {
     : currentArticles.filter(article => article.categoryKey === activeCategoryKey);
 
   return (
-    <section id="updates" className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#020704] text-[#e0e6db] font-serif overflow-hidden">
+    <section id="updates" className="relative py-20 px-4 sm:px-6 md:px-12 bg-[#020704] text-[#e0e6db] font-serif overflow-hidden select-none">
       
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#d4af37]/5 blur-[140px] pointer-events-none rounded-full" />
