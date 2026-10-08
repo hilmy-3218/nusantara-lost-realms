@@ -262,7 +262,7 @@ export default function Playnow({ lang = 'IND' }) {
   return (
     <section 
       id="playnow"
-      className="relative min-h-screen bg-black text-[#d4ceb8] font-serif flex flex-col justify-between items-center px-4 py-12 overflow-hidden selection:bg-[#c5a059] selection:text-black"
+      className="relative min-h-screen bg-black text-[#d4ceb8] font-serif flex flex-col justify-between items-center px-4 py-12 overflow-hidden selection:bg-[#c5a059] selection:text-black select-none"
     >
       {/* Video Background */}
       <video
