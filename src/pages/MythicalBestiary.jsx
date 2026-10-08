@@ -746,7 +746,7 @@ export default function MythicalBestiary({ lang = 'IND', t }) {
   };
 
   return (
-    <section id="creatures">
+    <section id="creatures" className="select-none">
       <div className="min-h-screen bg-[#060D0A] text-slate-200 font-sans p-4 sm:p-8 lg:p-12 relative overflow-x-hidden selection:bg-[#c8aa6e] selection:text-black">
         {/* Background Decorative Blur */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-[#162a21] opacity-20 blur-[120px] pointer-events-none" />
