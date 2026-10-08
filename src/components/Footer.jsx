@@ -75,7 +75,7 @@ export default function Footer({
   };
 
   return (
-    <footer className="relative w-full bg-[#020704] text-gray-400 font-serif overflow-hidden pt-16 pb-12 px-6 md:px-16 lg:px-24 border-t border-emerald-900/30">
+    <footer className="relative w-full bg-[#020704] text-gray-400 font-serif overflow-hidden pt-16 pb-12 px-6 md:px-16 lg:px-24 border-t border-emerald-900/30 select-none">
 
       {/* Background Atmosphere & Radial Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-[#c5a059]/60 to-transparent pointer-events-none" />
