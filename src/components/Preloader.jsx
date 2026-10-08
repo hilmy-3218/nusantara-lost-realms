@@ -181,14 +181,39 @@ export default function Preloader({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
             transition={{ duration: 0.4 }}
-            className="absolute z-50 top-6 left-1/2 -translate-x-1/2 bg-[#050c08]/95 border border-[#d4af37]/60 px-6 py-3 rounded-full shadow-[0_0_25px_rgba(212,175,55,0.3)] backdrop-blur-md flex items-center gap-4 text-xs font-sans"
+            className="
+              absolute z-50 top-4 left-1/2 -translate-x-1/2
+              w-[calc(100%-2rem)] max-w-fit
+              sm:w-auto
+              bg-[#050c08]/95
+              border border-[#d4af37]/60
+              px-4 py-3 sm:px-6 sm:py-3
+              rounded-2xl sm:rounded-full
+              shadow-[0_0_25px_rgba(212,175,55,0.3)]
+              backdrop-blur-md
+              flex flex-col sm:flex-row
+              items-center justify-center
+              gap-2 sm:gap-4
+              text-xs font-sans
+            "
           >
-            <span className="text-[#e2ded0] font-medium tracking-wide">
+            <span className="text-[#e2ded0] font-medium tracking-wide text-center whitespace-nowrap">
               Enable Cinematic Sound?
             </span>
+
             <button
               onClick={handleEnableSound}
-              className="flex items-center gap-1.5 px-4 py-1.5 bg-[#d4af37] hover:bg-white text-[#030705] font-bold rounded-full transition-all cursor-pointer shadow-[0_0_15px_rgba(212,175,55,0.5)]"
+              className="
+                flex items-center justify-center gap-1.5
+                px-4 py-1.5
+                bg-[#d4af37] hover:bg-white
+                text-[#030705]
+                font-bold rounded-full
+                transition-all
+                cursor-pointer
+                shadow-[0_0_15px_rgba(212,175,55,0.5)]
+                w-full sm:w-auto
+              "
             >
               <Volume2 className="w-3.5 h-3.5" />
               <span>YES</span>
