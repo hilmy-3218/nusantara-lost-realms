@@ -16,7 +16,7 @@ const loreChapters = {
       subtitle: 'GERBANG AWAL',
       title: 'TAKDIR EMPAT PENJAGA',
       quote:
-        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata—sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia.”',
+        '“Di balik reruntuhan kuno yang terlupakan, empat penjaga berdiri di hadapan gerbang tak kasatmata sebuah celah menuju dimensi lain yang seharusnya tak pernah terjamah manusia.”',
       bgImage: gate,
       align: 'right'
     },
@@ -58,7 +58,7 @@ const loreChapters = {
       subtitle: 'THE FORGOTTEN WORLD',
       title: 'FOOTSTEPS BEYOND THE GATE',
       quote:
-        '“Beyond the gate that should never have opened lies an alien world long buried from human memory. Among kingdom ruins and darkness shrouded forests, four guardians begin to uncover the traces of a curse that has endured for centuries.”',
+        '“Beyond the gate that should never have opened lies an alien world long buried from human memory. Among kingdom ruins and darkness-shrouded forests, four guardians begin to uncover the traces of a curse that has endured for centuries.”',
       bgImage: BgLore,
       align: 'left'
     },
@@ -177,7 +177,9 @@ export default function LoreThreshold({ lang = 'IND' }) {
 
       return () => mm.revert();
     },
-    { scope: stageContainerRef, dependencies: [lang], revertOnUpdate: true }
+    // Tanpa dependensi `lang`: ganti bahasa hanya mengubah teks, jadi timeline
+    // tidak perlu dibangun ulang (mencegah halaman melompat).
+    { scope: stageContainerRef, dependencies: [], revertOnUpdate: true }
   );
 
   // ===================== MOBILE: animasi scroll ringan (tanpa pin) =====================
@@ -298,7 +300,7 @@ export default function LoreThreshold({ lang = 'IND' }) {
 
       return () => mm.revert();
     },
-    { scope: mobileRef, dependencies: [lang], revertOnUpdate: true }
+    { scope: mobileRef, dependencies: [], revertOnUpdate: true }
   );
 
   const currentData = chapters[activeLoreIndex] || chapters[0];
