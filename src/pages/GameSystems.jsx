@@ -275,7 +275,7 @@ export default function GameSystems({ lang = 'IND' }) {
   const IconComponent = activeStyle.icon;
 
   return (
-    <section id="systems" className="py-20 md:py-32 px-3 sm:px-6 lg:px-16 bg-[#020704] relative text-[#e0e8e2] font-serif overflow-hidden">
+    <section id="systems" className="py-20 md:py-32 px-3 sm:px-6 lg:px-16 bg-[#020704] relative text-[#e0e8e2] font-serif overflow-hidden select-none">
       
       {/* Top Black Dark Gradient Overlay (Efek Gelap Bagian Atas) */}
       <div className="absolute top-0 left-0 right-0 h-40 md:h-64 bg-gradient-to-b from-[#060D0A] via-[#020704]/90 to-transparent z-20 pointer-events-none" />
