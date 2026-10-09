@@ -486,7 +486,7 @@ export default function GameSystems({ lang = 'IND' }) {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: "100%", opacity: 0 }}
               transition={{ type: "spring", damping: 26, stiffness: 280 }}
-              className="bg-[#05120c] border-t sm:border border-[#c8a961]/60 rounded-t-lg sm:rounded-md max-w-2xl w-full p-5 sm:p-7 md:p-8 relative shadow-[0_0_50px_rgba(200,169,97,0.2)] space-y-4 sm:space-y-6 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto scrollbar-none z-10 font-serif"
+              className="bg-[#05120c] border-t sm:border border-[#c8a961]/60 rounded-t-lg sm:rounded-md max-w-3xl w-full p-5 sm:p-7 md:p-8 relative shadow-[0_0_50px_rgba(200,169,97,0.2)] space-y-4 sm:space-y-6 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto scrollbar-none z-10 font-serif"
             >
               {/* Corner Ornaments in Modal */}
               <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#c8a961]" />
@@ -508,6 +508,22 @@ export default function GameSystems({ lang = 'IND' }) {
                 <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#f7ebd0] leading-tight uppercase tracking-wide">
                   {currentPillar.mechanicTitle}
                 </h3>
+              </div>
+
+              {/* Gambar Detail (jelas, tanpa overlay) */}
+              <div className="relative w-full overflow-hidden rounded-sm border border-[#c8a961]/50 bg-black shadow-lg">
+                <img
+                  key={currentPillar.id}
+                  src={currentPillar.image}
+                  alt={currentPillar.mechanicTitle}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-auto max-h-[40vh] sm:max-h-[50vh] object-contain mx-auto"
+                />
+                <div className="absolute inset-1.5 border border-[#c8a961]/20 pointer-events-none" />
+                <span className="absolute bottom-2 left-2 text-[9px] sm:text-[10px] font-mono tracking-widest text-[#c8a961] bg-[#020704]/85 px-2 py-1 rounded-sm border border-[#c8a961]/40 uppercase">
+                  {currentPillar.mechanicTag}
+                </span>
               </div>
 
               <p className="text-xs sm:text-sm font-sans text-stone-300 leading-relaxed font-light border-l-2 border-[#c8a961] pl-3 py-1 bg-[#081a12]">
