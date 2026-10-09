@@ -228,7 +228,7 @@ export default function HeroGate({ isMuted, setIsMuted, lang = 'IND', scrollToSe
     <section 
       ref={sectionRef}
       id='home' 
-      className="relative min-h-screen w-full bg-[#010302]/75 backdrop-blur-sm text-[#c2c9c4] flex flex-col justify-between items-center overflow-hidden font-['Plus_Jakarta_Sans'] selection:bg-[#cba342] selection:text-[#020604]"
+      className="relative min-h-screen w-full bg-[#010302]/75 backdrop-blur-sm text-[#c2c9c4] flex flex-col justify-between items-center overflow-hidden font-['Plus_Jakarta_Sans'] selection:bg-[#cba342] selection:text-[#020604] select-none"
     >
       
       {/* Background Video Loop */}
