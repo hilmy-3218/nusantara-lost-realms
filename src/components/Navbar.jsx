@@ -95,7 +95,7 @@ export default function Navbar({
             <div className="w-2.5 h-2.5 rounded-full bg-[#cba342] shadow-[0_0_12px_#cba342] group-hover:scale-125 transition-transform duration-300" />
           </div>
 
-          <span className="font-['Cinzel'] text-lg md:text-xl font-bold tracking-[0.3em] text-[#e5e9e6] uppercase group-hover:text-[#cba342] transition-colors duration-300 drop-shadow-[0_0_10px_rgba(203,163,66,0.2)]">
+          <span className="font-['Cinzel'] text-base md:text-xl font-bold tracking-[0.3em] text-[#e5e9e6] uppercase group-hover:text-[#cba342] transition-colors duration-300 drop-shadow-[0_0_10px_rgba(203,163,66,0.2)]">
             {content.title}
           </span>
         </button>
