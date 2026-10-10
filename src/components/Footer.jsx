@@ -6,7 +6,7 @@ const footerTranslations = {
   IND: {
     tagline: '"Ketika alam kuno terbangun, penjaga terakhir harus bangkit."',
     description:
-      'Petualangan aksi open-world yang berlatar di antara kanopi tropis legendaris, puncak perbukitan berkabut, dan megalit kekuasaan yang terlupakan.',
+      'Petualangan aksi open world yang berlatar di antara kanopi tropis legendaris, puncak perbukitan berkabut, dan megalit kekuasaan yang terlupakan.',
     exploreTitle: 'JELAJAHI ALAM',
     exploreLinks: [
       { label: 'BERANDA', id: 'home' },
@@ -29,7 +29,7 @@ const footerTranslations = {
     tagline:
       '"When the ancient realm awakens, the last guardian must rise."',
     description:
-      'An open-world action adventure set across mythical tropical canopies, misty jagged ridges, and forgotten sovereign megaliths.',
+      'An open world action adventure set across mythical tropical canopies, misty jagged ridges, and forgotten sovereign megaliths.',
     exploreTitle: 'EXPLORE REALM',
     exploreLinks: [
       { label: 'HOME', id: 'home' },
